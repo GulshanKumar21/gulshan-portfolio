@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gulshan Kumar — Android & Flutter Developer, AI/ML Enthusiast. B.Tech CSE from LPU (2022–2026). Building innovative mobile apps and intelligent systems." />
+  <meta name="keywords" content="Gulshan Kumar, Android Developer, Flutter Developer, AI ML, LPU, portfolio, mobile app developer" />
+  <meta name="author" content="Gulshan Kumar" />
+  <meta property="og:title" content="Gulshan Kumar | Android & Flutter Developer" />
+  <meta property="og:description" content="Portfolio of Gulshan Kumar — Android Developer, Flutter Engineer & AI/ML Enthusiast" />
+  <title>Gulshan Kumar | Android & Flutter Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>">
+</head>
+<body>
+
+  <!-- Floating particles background -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Ambient glowing background blobs -->
+  <div class="ambient-glows">
+    <div class="glow-blob glow-1"></div>
+    <div class="glow-blob glow-2"></div>
+    <div class="glow-blob glow-3"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" id="nav-logo">
+        <span class="logo-bracket">&lt;</span>GK<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+        <li><a href="#skills" class="nav-link" id="nav-skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
+        <li><a href="#experience" class="nav-link" id="nav-experience">Experience</a></li>
+        <li><a href="#certifications" class="nav-link" id="nav-certs">Certifications</a></li>
+        <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-image"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge" id="hero-badge">
+        <span class="badge-dot"></span>
+        Available for Opportunities
+      </div>
+      <h1 class="hero-title" id="hero-title">
+        Hi, I'm <span class="gradient-text">Gulshan Kumar</span>
+      </h1>
+      <div class="hero-subtitle" id="hero-subtitle">
+        <span class="typed-text" id="typed-text"></span>
+        <span class="cursor">|</span>
+      </div>
+      <p class="hero-desc" id="hero-desc">
+        B.Tech CSE @ <span class="highlight">LPU</span> (2022–2026) · Mobile Engineer specializing in <span class="highlight">Android Development</span> (Kotlin, Compose &amp; MVVM) with Firebase backend. Shipped robust, offline-first production apps used daily in real-world settings.
+      </p>
+      <div class="hero-buttons" id="hero-buttons">
+        <a href="#projects" class="btn btn-primary" id="btn-projects">View My Work</a>
+        <a href="#contact" class="btn btn-secondary" id="btn-contact">Get In Touch</a>
+      </div>
+      <div class="hero-stats" id="hero-stats">
+        <div class="stat">
+          <span class="stat-num">5+</span>
+          <span class="stat-label">Apps Built</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">15K+</span>
+          <span class="stat-label">Lines of Code</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">2026</span>
+          <span class="stat-label">Fresher · LPU</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual" id="hero-visual">
+      <div class="avatar-container">
+        <div class="avatar-glow"></div>
+        <div class="avatar-ring ring-1"></div>
+        <div class="avatar-ring ring-2"></div>
+        <div class="avatar-ring ring-3"></div>
+        <img src="profile_avatar.png" alt="Gulshan Kumar" class="avatar-img" id="avatar-img" />
+        <div class="tech-badge badge-android" id="badge-android">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.523 15.341a.513.513 0 01-.513-.513.513.513 0 01.513-.513.513.513 0 01.513.513.513.513 0 01-.513.513m-11.046 0a.513.513 0 01-.513-.513.513.513 0 01.513-.513.513.513 0 01.513.513.513.513 0 01-.513.513M17.7 9.16l1.025-1.776a.213.213 0 00-.077-.291.213.213 0 00-.291.077l-1.038 1.8A6.87 6.87 0 0012 7.878a6.87 6.87 0 00-5.32 2.092L5.643 8.17a.213.213 0 00-.291-.077.213.213 0 00-.077.291L6.3 9.16C4.09 10.35 2.583 12.613 2.583 15.213h18.833c0-2.6-1.507-4.862-3.716-6.054"/></svg>
+          Android
+        </div>
+        <div class="tech-badge badge-flutter" id="badge-flutter">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.37zm.013 9.301L7.69 15.94l6.637 6.636h7.346L15.036 16.9l6.637-6.6h-7.346z"/></svg>
+          Flutter
+        </div>
+        <div class="tech-badge badge-ai" id="badge-ai">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1a1 1 0 011 1v3a1 1 0 01-1 1h-1v1a2 2 0 01-2 2H5a2 2 0 01-2-2v-1H2a1 1 0 01-1-1v-3a1 1 0 011-1h1a7 7 0 017-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2M7.5 13A2.5 2.5 0 005 15.5 2.5 2.5 0 007.5 18 2.5 2.5 0 0010 15.5 2.5 2.5 0 007.5 13m9 0A2.5 2.5 0 0014 15.5a2.5 2.5 0 002.5 2.5 2.5 2.5 0 002.5-2.5 2.5 2.5 0 00-2.5-2.5z"/></svg>
+          AI/ML
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator" id="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Turning Ideas into <span class="gradient-text">Reality</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text" id="about-text">
+          <p>I'm <strong>Gulshan Kumar</strong>, a mobile engineer specializing in <strong>native Android (Kotlin)</strong>, cross-platform <strong>Flutter/Dart</strong> development, and AI/ML systems. I recently completed my B.Tech in CSE from <strong>Lovely Professional University (LPU)</strong>, Batch 2022–2026.</p>
+          <p>With hands-on experience shipping production-grade apps, I focus heavily on building scalable Android applications. My work includes architecting a complete enterprise-grade CRM app solo, which replaced legacy Excel tracking systems and is used daily in production by a sales team. I excel at translating complex specifications into clean, responsive user interfaces using <strong>Jetpack Compose</strong> and modern architectural patterns.</p>
+          <p>I build with an engineering mindset—utilizing <strong>MVVM architecture</strong>, <strong>Room Database</strong> for offline-first capabilities, <strong>WorkManager</strong> for scheduled sync, and <strong>Firebase</strong> for cloud databases and secure authentication. I am passionate about writing clean, maintainable, and testable mobile code.</p>
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-icon">🎓</span>
+              <div>
+                <span class="info-label">Education</span>
+                <span class="info-value">B.Tech CSE, LPU</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">📅</span>
+              <div>
+                <span class="info-label">Batch</span>
+                <span class="info-value">2022 – 2026</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">💼</span>
+              <div>
+                <span class="info-label">Status</span>
+                <span class="info-value">Working · Open to Opportunities</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">🌟</span>
+              <div>
+                <span class="info-label">Domain</span>
+                <span class="info-value">Android · Flutter · AI/ML</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual" id="about-visual">
+          <div class="code-card">
+            <div class="code-card-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="code-filename">gulshan.kt</span>
+            </div>
+            <pre class="code-content"><span class="code-keyword">data class</span> <span class="code-class">Developer</span>(
+  <span class="code-keyword">val</span> name: <span class="code-type">String</span>,
+  <span class="code-keyword">val</span> role: <span class="code-type">String</span>,
+  <span class="code-keyword">val</span> skills: <span class="code-type">List&lt;String&gt;</span>,
+  <span class="code-keyword">val</span> passion: <span class="code-type">String</span>
+)
+
+<span class="code-keyword">val</span> gulshan = <span class="code-class">Developer</span>(
+  name = <span class="code-string">"Gulshan Kumar"</span>,
+  role = <span class="code-string">"App Developer"</span>,
+  skills = <span class="code-func">listOf</span>(
+    <span class="code-string">"Android"</span>,
+    <span class="code-string">"Flutter"</span>,
+    <span class="code-string">"Kotlin"</span>,
+    <span class="code-string">"Dart"</span>,
+    <span class="code-string">"AI/ML"</span>
+  ),
+  passion = <span class="code-string">"Building apps that matter"</span>
+)</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technical Skills</span>
+        <h2 class="section-title">My <span class="gradient-text">Tech Stack</span></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category" id="skill-android">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon android-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.523 15.341a.513.513 0 01-.513-.513.513.513 0 01.513-.513.513.513 0 01.513.513.513.513 0 01-.513.513m-11.046 0a.513.513 0 01-.513-.513.513.513 0 01.513-.513.513.513 0 01.513.513.513.513 0 01-.513.513M17.7 9.16l1.025-1.776a.213.213 0 00-.077-.291.213.213 0 00-.291.077l-1.038 1.8A6.87 6.87 0 0012 7.878a6.87 6.87 0 00-5.32 2.092L5.643 8.17a.213.213 0 00-.291-.077.213.213 0 00-.077.291L6.3 9.16C4.09 10.35 2.583 12.613 2.583 15.213h18.833c0-2.6-1.507-4.862-3.716-6.054"/></svg>
+            </div>
+            <h3>Android Dev</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Kotlin</span>
+            <span class="skill-tag">Android Studio</span>
+            <span class="skill-tag">Jetpack Compose</span>
+            <span class="skill-tag">XML Layouts</span>
+            <span class="skill-tag">MVVM</span>
+            <span class="skill-tag">Room DB</span>
+            <span class="skill-tag">Retrofit</span>
+            <span class="skill-tag">WorkManager</span>
+            <span class="skill-tag">Firebase Auth</span>
+            <span class="skill-tag">Firebase Firestore</span>
+            <span class="skill-tag">Firebase FCM</span>
+            <span class="skill-tag">Firebase Storage</span>
+          </div>
+        </div>
+        <div class="skill-category" id="skill-flutter">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon flutter-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.37zm.013 9.301L7.69 15.94l6.637 6.636h7.346L15.036 16.9l6.637-6.6h-7.346z"/></svg>
+            </div>
+            <h3>Flutter Dev</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Dart</span>
+            <span class="skill-tag">Flutter</span>
+            <span class="skill-tag">Provider</span>
+            <span class="skill-tag">Bloc/Cubit</span>
+            <span class="skill-tag">GetX</span>
+            <span class="skill-tag">REST API</span>
+            <span class="skill-tag">Hive DB</span>
+            <span class="skill-tag">Cross-Platform</span>
+          </div>
+        </div>
+        <div class="skill-category" id="skill-aiml">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon ai-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1a1 1 0 011 1v3a1 1 0 01-1 1h-1v1a2 2 0 01-2 2H5a2 2 0 01-2-2v-1H2a1 1 0 01-1-1v-3a1 1 0 011-1h1a7 7 0 017-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2M7.5 13A2.5 2.5 0 005 15.5 2.5 2.5 0 007.5 18 2.5 2.5 0 0010 15.5 2.5 2.5 0 007.5 13m9 0A2.5 2.5 0 0014 15.5a2.5 2.5 0 002.5 2.5 2.5 2.5 0 002.5-2.5 2.5 2.5 0 00-2.5-2.5z"/></svg>
+            </div>
+            <h3>AI / ML</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">Machine Learning</span>
+            <span class="skill-tag">Deep Learning</span>
+            <span class="skill-tag">NLP</span>
+            <span class="skill-tag">Data Analysis</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Pandas</span>
+          </div>
+        </div>
+        <div class="skill-category" id="skill-other">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon other-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 3.21-1.81 6-4.72 7.28L13 17v5h5l-1.22-1.22C19.91 19.07 22 15.76 22 12c0-5.18-3.95-9.45-9-9.95M11 2.05C5.95 2.55 2 6.82 2 12c0 3.76 2.09 7.07 5.22 8.78L6 22h5v-5l-2.28 2.28C7.81 18 6 15.21 6 12c0-4.08 3.05-7.44 7-7.93V2.05z"/></svg>
+            </div>
+            <h3>Tools & Other</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Git & GitHub</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">Architecture Patterns</span>
+            <span class="skill-tag">Agile</span>
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Postman</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Architecture Pillars Section -->
+  <section class="section pillars-section" id="pillars">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Engineering Approach</span>
+        <h2 class="section-title">Mobile <span class="gradient-text">Architecture Pillars</span></h2>
+        <p class="section-subtitle">How I design and develop robust, industrial-grade Android applications to ensure optimal performance and user satisfaction.</p>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Pillar 1: Declarative UI & Styling -->
+        <div class="pillar-card" id="pillar-ui">
+          <div class="pillar-card-inner">
+            <div class="pillar-icon">🎨</div>
+            <h3>Modern Declarative UI</h3>
+            <p>Developing responsive, fluid mobile interfaces using <strong>Jetpack Compose</strong> and modern design tokens, combined with classic XML hybrid layouts for full compatibility.</p>
+            <div class="pillar-techs">
+              <span class="pillar-tech-tag">Jetpack Compose</span>
+              <span class="pillar-tech-tag">Material Design 3</span>
+              <span class="pillar-tech-tag">MotionLayout</span>
+            </div>
+          </div>
+          <div class="pillar-glow ui-glow"></div>
+        </div>
+
+        <!-- Pillar 2: Offline-First Caching -->
+        <div class="pillar-card" id="pillar-data">
+          <div class="pillar-card-inner">
+            <div class="pillar-icon">⚡</div>
+            <h3>Offline-First Architecture</h3>
+            <p>Implementing reactive local caching using <strong>Room DB</strong> and standard Repository patterns. Ensures apps remain completely functional with instant data loading even without network connectivity.</p>
+            <div class="pillar-techs">
+              <span class="pillar-tech-tag">Room Database</span>
+              <span class="pillar-tech-tag">Repository Pattern</span>
+              <span class="pillar-tech-tag">Data Caching</span>
+            </div>
+          </div>
+          <div class="pillar-glow data-glow"></div>
+        </div>
+
+        <!-- Pillar 3: Reliable Background Sync -->
+        <div class="pillar-card" id="pillar-sync">
+          <div class="pillar-card-inner">
+            <div class="pillar-icon">⚙️</div>
+            <h3>Background Synchronization</h3>
+            <p>Managing asynchronous cloud synchronizations and telemetry tasks cleanly using <strong>WorkManager</strong>, Foreground Services, BroadcastReceivers, and Kotlin Coroutines/Flow.</p>
+            <div class="pillar-techs">
+              <span class="pillar-tech-tag">WorkManager</span>
+              <span class="pillar-tech-tag">Kotlin Coroutines &amp; Flow</span>
+              <span class="pillar-tech-tag">Services &amp; Receivers</span>
+            </div>
+          </div>
+          <div class="pillar-glow sync-glow"></div>
+        </div>
+
+        <!-- Pillar 4: Security & Integrity -->
+        <div class="pillar-card" id="pillar-security">
+          <div class="pillar-card-inner">
+            <div class="pillar-icon">🛡️</div>
+            <h3>Security &amp; Secure Storage</h3>
+            <p>Encrypting local user preferences via <strong>EncryptedSharedPreferences</strong> and securing cloud endpoints with Firebase App Check and robust role-based firewalls.</p>
+            <div class="pillar-techs">
+              <span class="pillar-tech-tag">EncryptedPrefs</span>
+              <span class="pillar-tech-tag">Firebase App Check</span>
+              <span class="pillar-tech-tag">FCM Push Security</span>
+            </div>
+          </div>
+          <div class="pillar-glow security-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="shipped">🚀 Shipped Apps</button>
+        <button class="filter-btn" data-filter="academic">🎓 Academic Work</button>
+      </div>
+      <div class="project-card featured leaddialer-card filter-item shipped" id="project-leaddialer">
+        <div class="project-card-inner">
+          <div class="project-header">
+            <div class="project-icon crm-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </div>
+            <div class="project-meta">
+              <div class="project-badges">
+                <span class="project-type android-badge">Android · Kotlin</span>
+                <span class="project-type prod-badge">✅ Production</span>
+                <span class="project-type solo-badge">👤 Solo Built</span>
+                <span class="project-type private-badge">🔒 Private Repo</span>
+              </div>
+              <span class="project-date">Adyapan Edutech Pvt. Ltd. · Mar 2025 – Present</span>
+            </div>
+          </div>
+          <h3 class="project-title">Adyapan LeadDialer <span class="title-sub">— Enterprise CRM App</span></h3>
+          <p class="project-desc">A full-featured enterprise-grade Android CRM built <strong>entirely solo</strong> for Adyapan School's sales team. From architecture to UI to deployment — every line written by me. Replaced manual Excel tracking and is actively used daily by the real sales team. <strong>Not a demo — a real production app.</strong></p>
+
+          <div class="ld-stats-row">
+            <div class="ld-stat"><span class="ld-num">3+</span><span class="ld-lbl">Apps Shipped</span></div>
+            <div class="ld-stat"><span class="ld-num">2</span><span class="ld-lbl">User Roles</span></div>
+            <div class="ld-stat"><span class="ld-num">🟢</span><span class="ld-lbl">Live in Production</span></div>
+            <div class="ld-stat"><span class="ld-num">10+</span><span class="ld-lbl">Core Features</span></div>
+            <div class="ld-stat"><span class="ld-num">100%</span><span class="ld-lbl">Kotlin</span></div>
+          </div>
+
+          <div class="ld-sections">
+            <div class="ld-col">
+              <h4 class="ld-section-title">⚙️ Tech Stack</h4>
+              <div class="ld-tech-list">
+                <div class="ld-tech-row"><span class="ld-tech-label">Language</span><span class="ld-tech-val">Kotlin 100%</span></div>
+                <div class="ld-tech-row"><span class="ld-tech-label">UI</span><span class="ld-tech-val">Jetpack Compose + XML Hybrid</span></div>
+                <div class="ld-tech-row"><span class="ld-tech-label">Architecture</span><span class="ld-tech-val">MVVM · ViewModel · LiveData</span></div>
+                <div class="ld-tech-row"><span class="ld-tech-label">Local DB</span><span class="ld-tech-val">Room (SQLite) — Offline-First</span></div>
+                <div class="ld-tech-row"><span class="ld-tech-label">Cloud</span><span class="ld-tech-val">Firebase Firestore + Realtime DB</span></div>
+                <div class="ld-tech-row"><span class="ld-tech-label">Auth</span><span class="ld-tech-val">Firebase Auth (Email + Password)</span></div>
+                <div class="ld-tech-row"><span class="ld-tech-label">Background</span><span class="ld-tech-val">WorkManager + Foreground Service</span></div>
+                <div class="ld-tech-row"><span class="ld-tech-label">Calls</span><span class="ld-tech-val">TelephonyManager + BroadcastReceiver</span></div>
+                <div class="ld-tech-row"><span class="ld-tech-label">Export</span><span class="ld-tech-val">Apache POI (Excel .xlsx)</span></div>
+                <div class="ld-tech-row"><span class="ld-tech-label">Reports</span><span class="ld-tech-val">Google Sheets API v4</span></div>
+                <div class="ld-tech-row"><span class="ld-tech-label">Security</span><span class="ld-tech-val">Firebase App Check + EncryptedSharedPrefs</span></div>
+              </div>
+            </div>
+            <div class="ld-col">
+              <h4 class="ld-section-title">🚀 Key Features</h4>
+              <div class="project-features ld-features">
+                <div class="feature-item">📞 One-tap Lead Calling</div>
+                <div class="feature-item">🤖 Background Call Detection</div>
+                <div class="feature-item">📊 Live Sales Dashboard</div>
+                <div class="feature-item">✅ GPS Attendance + Selfie</div>
+                <div class="feature-item">💬 WhatsApp Auto-Messaging</div>
+                <div class="feature-item">📈 Google Sheets Export</div>
+                <div class="feature-item">📤 Excel .xlsx Reports</div>
+                <div class="feature-item">🌙 Offline-First Architecture</div>
+                <div class="feature-item">👑 Admin Panel</div>
+                <div class="feature-item">🔔 FCM Push Notifications</div>
+                <div class="feature-item">🔒 Role-Based Security</div>
+                <div class="feature-item">📅 Leave Management</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-tech" style="margin-top:1.5rem">
+            <span class="tech-pill">Kotlin</span>
+            <span class="tech-pill">Jetpack Compose</span>
+            <span class="tech-pill">MVVM</span>
+            <span class="tech-pill">Room DB</span>
+            <span class="tech-pill">Firebase</span>
+            <span class="tech-pill">WorkManager</span>
+            <span class="tech-pill">Apache POI</span>
+            <span class="tech-pill">Google Sheets API</span>
+            <span class="tech-pill">TelephonyManager</span>
+          </div>
+        </div>
+        <div class="project-glow crm-glow"></div>
+      </div>
+
+      <div class="projects-grid">  
+        <!-- Zoo Explorer -->
+        <div class="project-card featured filter-item academic" id="project-zoo">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon zoo-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M4.5 11a1.5 1.5 0 100-3 1.5 1.5 0 000 3M19.5 11a1.5 1.5 0 100-3 1.5 1.5 0 000 3M12 7c-3.86 0-7 3.14-7 7s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7m0 12c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5m-2-4h4v2h-4v-2M9 11h2v2H9v-2m4 0h2v2h-2v-2M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+              </div>
+              <div class="project-meta">
+                <span class="project-date">Jan 2025 – Mar 2025</span>
+                <span class="project-type android-badge">Android</span>
+              </div>
+            </div>
+            <h3 class="project-title">Zoo Explorer</h3>
+            <p class="project-desc">An interactive Android application enhancing the zoo visiting experience through smart navigation, real-time updates, educational content, and engaging entertainment. Serves as a virtual guide with detailed animal info, interactive maps, event schedules &amp; personalized profiles.</p>
+            <div class="project-features">
+              <div class="feature-item">📍 Smart Navigation</div>
+              <div class="feature-item">🦁 Animal Encyclopedia</div>
+              <div class="feature-item">🗺️ Interactive Maps</div>
+              <div class="feature-item">📅 Event Schedules</div>
+              <div class="feature-item">👤 User Profiles</div>
+              <div class="feature-item">🔔 Real-time Updates</div>
+            </div>
+            <div class="project-tech">
+              <span class="tech-pill">Kotlin</span>
+              <span class="tech-pill">Android Studio</span>
+              <span class="tech-pill">MVVM</span>
+              <span class="tech-pill">Firebase</span>
+              <span class="tech-pill">Google Maps API</span>
+            </div>
+          </div>
+          <div class="project-glow zoo-glow"></div>
+        </div>
+
+        <!-- Learning System -->
+        <div class="project-card filter-item academic" id="project-learning">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon learning-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3m6.82 6L12 12.72 5.18 9 12 5.28 18.82 9M17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+              </div>
+              <div class="project-meta">
+                <span class="project-date">Dec 2022</span>
+                <span class="project-type web-badge">Web</span>
+              </div>
+            </div>
+            <h3 class="project-title">Learning System</h3>
+            <p class="project-desc">A comprehensive Learning Management System (LMS) website built during my time at LPU. A centralized hub connecting students, teachers, and administrators to access resources, track progress, and facilitate efficient learning.</p>
+            <div class="project-features">
+              <div class="feature-item">📚 Course Management</div>
+              <div class="feature-item">📊 Progress Tracking</div>
+              <div class="feature-item">👨‍🏫 Teacher Dashboard</div>
+              <div class="feature-item">🎯 Student Portal</div>
+            </div>
+            <div class="project-tech">
+              <span class="tech-pill">JavaScript</span>
+              <span class="tech-pill">HTML/CSS</span>
+              <span class="tech-pill">Architecture</span>
+            </div>
+            <div class="project-affiliation">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+              Associated with LPU
+            </div>
+          </div>
+          <div class="project-glow learning-glow"></div>
+        </div>
+        <!-- School Student App -->
+        <div class="project-card featured filter-item shipped" id="project-school-student">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon student-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+              </div>
+              <div class="project-meta">
+                <div class="project-badges">
+                  <span class="project-type flutter-badge">Flutter · Dart</span>
+                  <span class="project-type prod-badge">✅ Production</span>
+                  <span class="project-type private-badge">🔒 Private Repo</span>
+                </div>
+                <span class="project-date">Adyapan Edutech Pvt. Ltd. · Mar 2025 – Present</span>
+              </div>
+            </div>
+            <h3 class="project-title">Adyapan Student App <span class="title-sub">— Learning Platform</span></h3>
+            <p class="project-desc">A premium Flutter learning app for students of Class 1–10 with gamified curriculum, parental controls, and mobile-console-style UI. I was responsible for <strong>complete app development (frontend &amp; UI)</strong> — backend &amp; APIs handled by the backend team.</p>
+            <div class="project-features">
+              <div class="feature-item">🔐 Dual Login + Class Selector</div>
+              <div class="feature-item">🎮 Gamified Learning (XP System)</div>
+              <div class="feature-item">📚 Class-wise Notes & PDFs</div>
+              <div class="feature-item">📹 Mock Live Classroom + Chat</div>
+              <div class="feature-item">📊 SVG Progress Analytics</div>
+              <div class="feature-item">🧠 Pomodoro Focus Mode</div>
+              <div class="feature-item">🛡️ PIN-locked Parental Panel</div>
+              <div class="feature-item">🗺️ Math & Coding Roadmap Tree</div>
+            </div>
+            <div class="project-tech">
+              <span class="tech-pill">Flutter</span>
+              <span class="tech-pill">Dart</span>
+              <span class="tech-pill">Glassmorphism UI</span>
+              <span class="tech-pill">Firebase</span>
+              <span class="tech-pill">Gamification</span>
+              <span class="tech-pill">SVG Charts</span>
+            </div>
+          </div>
+          <div class="project-glow student-glow"></div>
+        </div>
+
+        <!-- School Admin App -->
+        <div class="project-card filter-item shipped" id="project-school-admin">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon admin-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l5 2.18V11c0 3.5-2.33 6.79-5 7.93-2.67-1.14-5-4.43-5-7.93V7.18L12 5zm-1 5v6h2v-6h-2zm0-4v2h2V6h-2z"/></svg>
+              </div>
+              <div class="project-meta">
+                <div class="project-badges">
+                  <span class="project-type flutter-badge">Flutter · Dart</span>
+                  <span class="project-type prod-badge">✅ Production</span>
+                  <span class="project-type team-badge">👥 Team Project</span>
+                  <span class="project-type private-badge">🔒 Private Repo</span>
+                </div>
+                <span class="project-date">Adyapan Edutech Pvt. Ltd. · Mar 2025 – Present</span>
+              </div>
+            </div>
+            <h3 class="project-title">Adyapan Admin App <span class="title-sub">— Principal & Admin Panel</span></h3>
+            <p class="project-desc">A Flutter management app for school principals and administrators. I handled complete <strong>app development (frontend &amp; UI)</strong> — backend &amp; APIs handled by the backend team. Provides full control over students, classes, content, and operations.</p>
+            <div class="project-features">
+              <div class="feature-item">👑 Principal Dashboard</div>
+              <div class="feature-item">👨‍🎓 Student Management</div>
+              <div class="feature-item">📋 Class & Content Control</div>
+              <div class="feature-item">📊 School Analytics</div>
+            </div>
+            <div class="project-tech">
+              <span class="tech-pill">Flutter</span>
+              <span class="tech-pill">Dart</span>
+              <span class="tech-pill">Firebase</span>
+              <span class="tech-pill">Admin Panel</span>
+            </div>
+            <div class="project-affiliation">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              Adyapan Edutech Private Limited
+            </div>
+          </div>
+          <div class="project-glow admin-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section experience-section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Work Experience</span>
+        <h2 class="section-title">Professional <span class="gradient-text">Journey</span></h2>
+      </div>
+      <div class="timeline">
+        <!-- Current Job -->
+        <div class="timeline-item current" id="exp-current">
+          <div class="timeline-dot active"></div>
+          <div class="timeline-content">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-title">Android &amp; Flutter Developer</h3>
+                <span class="exp-company">Adyapan Edutech Private Limited · App Developer</span>
+              </div>
+              <span class="exp-duration current-badge">Mar 2025 – Present</span>
+            </div>
+            <p class="exp-desc">
+              Working as an in-house App Developer, solely responsible for building and shipping <strong>3 production-grade mobile apps</strong> used daily by real employees and admins — from design &amp; architecture to deployment.
+            </p>
+            <div class="apps-built">
+              <h4>Apps Delivered:</h4>
+              <div class="app-list">
+                <div class="app-item" id="app-leaddialer">
+                  <div class="app-icon android-app">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                  </div>
+                  <div>
+                    <span class="app-name">Adyapan LeadDialer</span>
+                    <span class="app-platform">Android · Kotlin <span class="live-dot">🟢 Live</span></span>
+                  </div>
+                </div>
+                <div class="app-item" id="app-school1">
+                  <div class="app-icon flutter-app">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.37zm.013 9.301L7.69 15.94l6.637 6.636h7.346L15.036 16.9l6.637-6.6h-7.346z"/></svg>
+                  </div>
+                  <div>
+                    <span class="app-name">Adyapan Student App</span>
+                    <span class="app-platform">Flutter · Dart <span class="live-dot">🟢 Live</span></span>
+                  </div>
+                </div>
+                <div class="app-item" id="app-school2">
+                  <div class="app-icon flutter-app">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.37zm.013 9.301L7.69 15.94l6.637 6.636h7.346L15.036 16.9l6.637-6.6h-7.346z"/></svg>
+                  </div>
+                  <div>
+                    <span class="app-name">Adyapan Admin App</span>
+                    <span class="app-platform">Flutter · Dart <span class="live-dot">🟢 Live</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="exp-skills" style="margin-top:1rem;">
+              <span class="skill-pill">Android</span>
+              <span class="skill-pill">Flutter</span>
+              <span class="skill-pill">Kotlin</span>
+              <span class="skill-pill">Dart</span>
+              <span class="skill-pill">Firebase</span>
+              <span class="skill-pill">MVVM</span>
+              <span class="skill-pill">Production Apps</span>
+            </div>
+          </div>
+        </div>
+        <!-- LPU -->
+        <div class="timeline-item" id="exp-lpu">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-title">B.Tech CSE Student</h3>
+                <span class="exp-company">Lovely Professional University (LPU)</span>
+              </div>
+              <span class="exp-duration">2022 – 2026</span>
+            </div>
+            <p class="exp-desc">Pursuing Computer Science & Engineering, specializing in Android Development and AI/ML. Built multiple projects and participated in technical activities.</p>
+            <div class="exp-skills">
+              <span class="skill-pill">CSE</span>
+              <span class="skill-pill">Android</span>
+              <span class="skill-pill">AI/ML</span>
+              <span class="skill-pill">Data Structures</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="section certifications-section" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Learning &amp; Achievements</span>
+        <h2 class="section-title">Certifications <span class="gradient-text">&amp; Credentials</span></h2>
+        <p class="section-subtitle">A collection of professional certifications from Coursera and NPTEL (IITs) verifying my expertise in app development, machine learning, and computer science fundamentals.</p>
+      </div>
+
+      <div class="certs-grid">
+        <!-- NPTEL Cloud Computing -->
+        <div class="cert-card nptel-cert" id="cert-nptel-cloud">
+          <div class="cert-card-inner">
+            <div class="cert-header">
+              <div class="cert-platform nptel-badge">🏛️ NPTEL · IIT</div>
+              <span class="cert-date">Completed 2024</span>
+            </div>
+            <h3 class="cert-title">Cloud Computing</h3>
+            <p class="cert-desc">Comprehensive certification covering virtualization, cloud architecture patterns, distributed storage systems, and cloud resource scheduling policies.</p>
+            <div class="cert-skills">
+              <span class="cert-skill-tag">Virtualization</span>
+              <span class="cert-skill-tag">Cloud Architecture</span>
+              <span class="cert-skill-tag">Distributed Systems</span>
+            </div>
+          </div>
+          <div class="cert-glow nptel-glow"></div>
+        </div>
+
+        <!-- Coursera Machine Learning Specialization -->
+        <div class="cert-card coursera-cert dl-cert" id="cert-ml-spec">
+          <div class="cert-card-inner">
+            <div class="cert-header">
+              <div class="cert-platform dl-badge">🧠 DeepLearning.AI &amp; Stanford</div>
+              <span class="cert-date">Completed Mar 2025</span>
+            </div>
+            <h3 class="cert-title">Machine Learning Specialization</h3>
+            <p class="cert-desc">3-course specialization by Andrew Ng covering Supervised ML (Regression/Classification), Advanced Learning Algorithms (Neural Networks, Decision Trees), and Unsupervised Learning (Recommenders, Reinforcement Learning).</p>
+            <div class="cert-skills">
+              <span class="cert-skill-tag">Supervised Learning</span>
+              <span class="cert-skill-tag">Deep Learning</span>
+              <span class="cert-skill-tag">Neural Networks</span>
+              <span class="cert-skill-tag">Python &amp; TensorFlow</span>
+            </div>
+            <a href="https://www.coursera.org/account/accomplishments/specialization/3DFSJ0DV93A4" target="_blank" class="cert-link">Verify Credential ↗</a>
+          </div>
+          <div class="cert-glow dl-glow"></div>
+        </div>
+
+        <!-- Coursera Meta Kotlin Fundamentals -->
+        <div class="cert-card coursera-cert meta-cert" id="cert-meta-kotlin">
+          <div class="cert-card-inner">
+            <div class="cert-header">
+              <div class="cert-platform meta-badge">♾️ Meta</div>
+              <span class="cert-date">Completed Nov 2024</span>
+            </div>
+            <h3 class="cert-title">Programming Fundamentals in Kotlin <span class="cert-grade">Grade: 92.5%</span></h3>
+            <p class="cert-desc">Core programming principles, object-oriented concepts, loops, variables, classes, and collection frameworks in Kotlin, certified by Meta.</p>
+            <div class="cert-skills">
+              <span class="cert-skill-tag">Kotlin</span>
+              <span class="cert-skill-tag">OOPs</span>
+              <span class="cert-skill-tag">Data Structures</span>
+            </div>
+            <a href="https://www.coursera.org/account/accomplishments/verify/XA9Q7JOAML5F" target="_blank" class="cert-link">Verify Credential ↗</a>
+          </div>
+          <div class="cert-glow meta-glow"></div>
+        </div>
+
+        <!-- Coursera Meta Android Intro -->
+        <div class="cert-card coursera-cert meta-cert" id="cert-meta-android-intro">
+          <div class="cert-card-inner">
+            <div class="cert-header">
+              <div class="cert-platform meta-badge">♾️ Meta</div>
+              <span class="cert-date">Completed Oct 2024</span>
+            </div>
+            <h3 class="cert-title">Introduction to Android App Development <span class="cert-grade">Grade: 91.87%</span></h3>
+            <p class="cert-desc">Fundamentals of Android OS, setting up Android Studio, configuring layouts, creating UI/UX using XML, and deploying standard apps.</p>
+            <div class="cert-skills">
+              <span class="cert-skill-tag">Android Studio</span>
+              <span class="cert-skill-tag">Mobile UX</span>
+              <span class="cert-skill-tag">XML Layouts</span>
+            </div>
+            <a href="https://www.coursera.org/account/accomplishments/verify/MY6XI6HZL6PP" target="_blank" class="cert-link">Verify Credential ↗</a>
+          </div>
+          <div class="cert-glow meta-glow"></div>
+        </div>
+
+        <!-- Coursera Meta Version Control -->
+        <div class="cert-card coursera-cert meta-cert" id="cert-meta-git">
+          <div class="cert-card-inner">
+            <div class="cert-header">
+              <div class="cert-platform meta-badge">♾️ Meta</div>
+              <span class="cert-date">Completed 2024</span>
+            </div>
+            <h3 class="cert-title">Version Control</h3>
+            <p class="cert-desc">Hands-on mastery of Git, command-line branch operations, repository administration, conflicts resolution, and collaboration on GitHub.</p>
+            <div class="cert-skills">
+              <span class="cert-skill-tag">Git</span>
+              <span class="cert-skill-tag">GitHub</span>
+              <span class="cert-skill-tag">Version Control</span>
+            </div>
+            <a href="https://www.coursera.org/account/accomplishments/verify/L3RNWPN1FL2P" target="_blank" class="cert-link">Verify Credential ↗</a>
+          </div>
+          <div class="cert-glow meta-glow"></div>
+        </div>
+
+        <!-- Coursera Google Networking -->
+        <div class="cert-card coursera-cert google-cert" id="cert-google-net">
+          <div class="cert-card-inner">
+            <div class="cert-header">
+              <div class="cert-platform google-badge">🟡 Google</div>
+              <span class="cert-date">Completed Nov 2023</span>
+            </div>
+            <h3 class="cert-title">The Bits and Bytes of Computer Networking</h3>
+            <p class="cert-desc">In-depth networking course covering the five-layer TCP/IP model, routing protocols, DNS, DHCP, IPv4/IPv6 subnetting, and network security policies.</p>
+            <div class="cert-skills">
+              <span class="cert-skill-tag">TCP/IP Model</span>
+              <span class="cert-skill-tag">DNS &amp; DHCP</span>
+              <span class="cert-skill-tag">Networking Protocols</span>
+            </div>
+            <a href="https://www.coursera.org/account/accomplishments/verify/T95QPSFUT2KW" target="_blank" class="cert-link">Verify Credential ↗</a>
+          </div>
+          <div class="cert-glow google-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+        <p class="section-subtitle">I'm open to new opportunities, collaborations, and interesting projects. Feel free to reach out!</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card" id="contact-email">
+          <div class="contact-icon email-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <h3>Email</h3>
+          <a href="mailto:gushan76542@gmail.com" class="contact-link">gushan76542@gmail.com</a>
+        </div>
+        <div class="contact-card" id="contact-github">
+          <div class="contact-icon github-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
+          </div>
+          <h3>GitHub</h3>
+          <a href="https://github.com/GulshanKumar21" target="_blank" class="contact-link">github.com/GulshanKumar21</a>
+        </div>
+        <div class="contact-card" id="contact-linkedin">
+          <div class="contact-icon linkedin-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </div>
+          <h3>LinkedIn</h3>
+          <a href="https://www.linkedin.com/in/gulshan-kumar38/" target="_blank" class="contact-link">linkedin.com/in/gulshan-kumar38</a>
+        </div>
+      </div>
+      <div class="contact-cta" id="contact-cta">
+        <p>Fresh Graduate from LPU (2026) · Ready to kickstart my career 🚀</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="#hero" class="footer-logo">
+          <span class="logo-bracket">&lt;</span>GK<span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-text">Designed & Built by <strong>Gulshan Kumar</strong></p>
+        <p class="footer-sub">B.Tech CSE · LPU · 2022–2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
