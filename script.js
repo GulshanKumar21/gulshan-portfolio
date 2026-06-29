@@ -282,19 +282,21 @@ const terminalInput = document.getElementById('terminal-input');
 const terminalOutput = document.getElementById('terminal-output');
 
 // Open Terminal
-terminalToggleBtn.addEventListener('click', () => {
-  terminalDrawer.classList.add('open');
-  terminalToggleBtn.classList.add('hide');
-  setTimeout(() => terminalInput.focus(), 300);
-});
+if (terminalToggleBtn) {
+  terminalToggleBtn.addEventListener('click', () => {
+    if (terminalDrawer) terminalDrawer.classList.add('open');
+    terminalToggleBtn.classList.add('hide');
+    if (terminalInput) setTimeout(() => terminalInput.focus(), 300);
+  });
+}
 
 // Close/Minimize Terminal
 const closeTerminal = () => {
-  terminalDrawer.classList.remove('open');
-  terminalToggleBtn.classList.remove('hide');
+  if (terminalDrawer) terminalDrawer.classList.remove('open');
+  if (terminalToggleBtn) terminalToggleBtn.classList.remove('hide');
 };
-terminalCloseBtn.addEventListener('click', closeTerminal);
-terminalMinBtn.addEventListener('click', closeTerminal);
+if (terminalCloseBtn) terminalCloseBtn.addEventListener('click', closeTerminal);
+if (terminalMinBtn) terminalMinBtn.addEventListener('click', closeTerminal);
 
 // Command handler
 function addLine(content, className = '') {
@@ -401,13 +403,15 @@ function runCommand(cmd) {
   }
 }
 
-terminalInput.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') {
-    const cmd = terminalInput.value;
-    terminalInput.value = '';
-    runCommand(cmd);
-  }
-});
+if (terminalInput) {
+  terminalInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      const cmd = terminalInput.value;
+      terminalInput.value = '';
+      runCommand(cmd);
+    }
+  });
+}
 
 // ===== THEME TOGGLE (LIGHT / DARK) =====
 const themeToggleBtn = document.getElementById('theme-toggle');
@@ -428,14 +432,16 @@ if (savedTheme === 'light') {
   setTheme(systemPrefersDark ? 'dark' : 'light');
 }
 
-themeToggleBtn.addEventListener('click', () => {
-  const currentTheme = document.documentElement.getAttribute('data-theme');
-  if (currentTheme === 'light') {
-    setTheme('dark');
-  } else {
-    setTheme('light');
-  }
-});
+if (themeToggleBtn) {
+  themeToggleBtn.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    if (currentTheme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  });
+}
 
 // ===== INTERACTIVE MOBILE APP SIMULATOR =====
 const simModal = document.getElementById('simulator-modal');
