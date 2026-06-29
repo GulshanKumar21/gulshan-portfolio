@@ -250,6 +250,165 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// ===== CODE CARD TABS =====
+const codeTabs = document.querySelectorAll('.code-tab');
+const codeContents = document.querySelectorAll('.code-content');
+
+codeTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    codeTabs.forEach(t => t.classList.remove('active'));
+    codeContents.forEach(c => {
+      c.classList.remove('active');
+      c.style.display = 'none';
+    });
+
+    tab.classList.add('active');
+    const selectedTab = tab.getAttribute('data-tab');
+    const targetContent = document.getElementById(`code-${selectedTab}`);
+    if (targetContent) {
+      targetContent.classList.add('active');
+      targetContent.style.display = 'block';
+    }
+  });
+});
+
+// ===== INTERACTIVE DEV TERMINAL =====
+const terminalContainer = document.getElementById('terminal-container');
+const terminalToggleBtn = document.getElementById('terminal-toggle-btn');
+const terminalDrawer = document.getElementById('terminal-drawer');
+const terminalCloseBtn = document.getElementById('terminal-close-btn');
+const terminalMinBtn = document.getElementById('terminal-min-btn');
+const terminalInput = document.getElementById('terminal-input');
+const terminalOutput = document.getElementById('terminal-output');
+
+// Open Terminal
+terminalToggleBtn.addEventListener('click', () => {
+  terminalDrawer.classList.add('open');
+  terminalToggleBtn.classList.add('hide');
+  setTimeout(() => terminalInput.focus(), 300);
+});
+
+// Close/Minimize Terminal
+const closeTerminal = () => {
+  terminalDrawer.classList.remove('open');
+  terminalToggleBtn.classList.remove('hide');
+};
+terminalCloseBtn.addEventListener('click', closeTerminal);
+terminalMinBtn.addEventListener('click', closeTerminal);
+
+// Command handler
+function addLine(content, className = '') {
+  const line = document.createElement('div');
+  line.className = `output-line ${className}`;
+  line.innerHTML = content;
+  terminalOutput.appendChild(line);
+  terminalOutput.scrollTop = terminalOutput.scrollHeight;
+}
+
+// Suggestions click handler
+document.querySelectorAll('.suggestion-tag').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const cmd = btn.getAttribute('data-cmd');
+    runCommand(cmd);
+  });
+});
+
+let isBuilding = false;
+
+function runCommand(cmd) {
+  if (isBuilding) return;
+  cmd = cmd.trim().toLowerCase();
+  if (!cmd) return;
+
+  addLine(`<span class="terminal-prompt">guest@gulshan:~$</span> <span class="output-command-run">${cmd}</span>`);
+
+  switch (cmd) {
+    case 'help':
+      addLine('Available commands:');
+      addLine('  <span class="cmd-highlight">about</span>    - Brief summary of my background');
+      addLine('  <span class="cmd-highlight">skills</span>   - List my technical stack category-wise');
+      addLine('  <span class="cmd-highlight">projects</span> - View production and academic projects');
+      addLine('  <span class="cmd-highlight">build</span>    - Compile code & run simulated tests');
+      addLine('  <span class="cmd-highlight">clear</span>   - Clear terminal screen');
+      break;
+
+    case 'about':
+      addLine('<strong>Gulshan Kumar</strong> — Android & Flutter Developer');
+      addLine('B.Tech CSE student from Lovely Professional University (Batch 2022-2026).');
+      addLine('Currently working as App Developer at Adyapan Edutech Private Limited.');
+      addLine('Passionate about building performant, offline-first mobile systems using Clean Architecture.');
+      break;
+
+    case 'skills':
+      addLine('Technical Tech Stack:');
+      addLine('  <span class="cmd-highlight">[Android]</span> Kotlin, Jetpack Compose, XML Layouts, Room DB, WorkManager, MVVM');
+      addLine('  <span class="cmd-highlight">[Flutter]</span> Dart, Cross-Platform UI, BLoC, GetX, Provider, REST APIs');
+      addLine('  <span class="cmd-highlight">[AI & ML]</span> Python, TensorFlow, Deep Learning, NLP, Pandas, NumPy');
+      addLine('  <span class="cmd-highlight">[Cloud/DB]</span> Firebase Auth, Firestore, Realtime DB, Cloud Storage, Push Notifications');
+      break;
+
+    case 'projects':
+      addLine('Featured App Deliveries:');
+      addLine('  🚀 <span class="cmd-highlight">Adyapan LeadDialer (CRM)</span> - Solo built, 100% Kotlin production app with offline storage and background call syncing.');
+      addLine('  🚀 <span class="cmd-highlight">Adyapan Student App</span> - Flutter-based gamified educational app with parental dashboard.');
+      addLine('  🚀 <span class="cmd-highlight">Adyapan Admin App</span> - Flutter school admin suite.');
+      addLine('  🎓 <span class="cmd-highlight">Zoo Explorer App</span> - Native Android guide app with maps.');
+      break;
+
+    case 'clear':
+      terminalOutput.innerHTML = '';
+      break;
+
+    case 'build':
+      isBuilding = true;
+      terminalInput.disabled = true;
+      terminalInput.placeholder = 'Building project, please wait...';
+      
+      const buildSteps = [
+        { text: 'Starting Gradle daemon...', delay: 200, class: 'build-log' },
+        { text: 'Checking Gradle dependencies...', delay: 500, class: 'build-log' },
+        { text: 'Task :app:preBuild UP-TO-DATE', delay: 300, class: 'build-task' },
+        { text: 'Task :app:compileDebugKotlin', delay: 600, class: 'build-task' },
+        { text: '  -> Compiled 27 Kotlin files successfully.', delay: 200, class: 'build-log' },
+        { text: 'Task :app:compileDebugJavaWithJavac UP-TO-DATE', delay: 200, class: 'build-task' },
+        { text: 'Task :app:processDebugResources', delay: 400, class: 'build-task' },
+        { text: 'Task :app:testDebugUnitTest', delay: 500, class: 'build-task' },
+        { text: '  -> Run 14 unit tests: 14 PASSED, 0 FAILED.', delay: 200, class: 'build-log' },
+        { text: 'Task :app:assembleDebug', delay: 300, class: 'build-task' },
+        { text: 'BUILD SUCCESSFUL in 3.4s (10 actionable tasks: 3 executed, 7 up-to-date)', delay: 200, class: 'build-success' },
+        { text: '📱 App compiled successfully! Ready for staging upload.', delay: 200, class: 'success' }
+      ];
+
+      let currentStep = 0;
+      function executeBuildStep() {
+        if (currentStep < buildSteps.length) {
+          const step = buildSteps[currentStep];
+          addLine(step.text, step.class);
+          currentStep++;
+          setTimeout(executeBuildStep, step.delay);
+        } else {
+          isBuilding = false;
+          terminalInput.disabled = false;
+          terminalInput.placeholder = 'Type a command...';
+          terminalInput.focus();
+        }
+      }
+      executeBuildStep();
+      break;
+
+    default:
+      addLine(`bash: command not found: ${cmd}. Type <span class="cmd-highlight">help</span> for available commands.`, 'error');
+  }
+}
+
+terminalInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    const cmd = terminalInput.value;
+    terminalInput.value = '';
+    runCommand(cmd);
+  }
+});
+
 console.log('%c👋 Hey there! I\'m Gulshan Kumar', 'color: #a78bfa; font-size: 18px; font-weight: bold;');
 console.log('%c🚀 Android & Flutter Developer | AI/ML Enthusiast', 'color: #06b6d4; font-size: 14px;');
 console.log('%c📬 Get in touch: gushan76542@gmail.com', 'color: #f59e0b; font-size: 12px;');

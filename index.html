@@ -160,30 +160,47 @@
         <div class="about-visual" id="about-visual">
           <div class="code-card">
             <div class="code-card-header">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-              <span class="code-filename">gulshan.kt</span>
+              <div class="window-controls">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="code-tabs">
+                <button class="code-tab active" data-tab="kt">gulshan.kt</button>
+                <button class="code-tab" data-tab="dart">gulshan.dart</button>
+                <button class="code-tab" data-tab="py">gulshan.py</button>
+              </div>
             </div>
-            <pre class="code-content"><span class="code-keyword">data class</span> <span class="code-class">Developer</span>(
-  <span class="code-keyword">val</span> name: <span class="code-type">String</span>,
-  <span class="code-keyword">val</span> role: <span class="code-type">String</span>,
-  <span class="code-keyword">val</span> skills: <span class="code-type">List&lt;String&gt;</span>,
-  <span class="code-keyword">val</span> passion: <span class="code-type">String</span>
-)
-
-<span class="code-keyword">val</span> gulshan = <span class="code-class">Developer</span>(
-  name = <span class="code-string">"Gulshan Kumar"</span>,
-  role = <span class="code-string">"App Developer"</span>,
-  skills = <span class="code-func">listOf</span>(
-    <span class="code-string">"Android"</span>,
-    <span class="code-string">"Flutter"</span>,
-    <span class="code-string">"Kotlin"</span>,
-    <span class="code-string">"Dart"</span>,
-    <span class="code-string">"AI/ML"</span>
+            <div class="code-content-wrapper">
+              <pre class="code-content active" id="code-kt"><span class="code-keyword">data class</span> <span class="code-class">Developer</span>(
+  <span class="code-keyword">val</span> name: <span class="code-type">String</span> = <span class="code-string">"Gulshan Kumar"</span>,
+  <span class="code-keyword">val</span> role: <span class="code-type">String</span> = <span class="code-string">"Android &amp; Flutter Dev"</span>,
+  <span class="code-keyword">val</span> skills: <span class="code-type">List&lt;String&gt;</span> = <span class="code-func">listOf</span>(
+    <span class="code-string">"Kotlin"</span>, <span class="code-string">"Jetpack Compose"</span>,
+    <span class="code-string">"Dart"</span>, <span class="code-string">"Flutter"</span>, <span class="code-string">"Firebase"</span>,
+    <span class="code-string">"MVVM"</span>, <span class="code-string">"Room"</span>, <span class="code-string">"WorkManager"</span>
   ),
-  passion = <span class="code-string">"Building apps that matter"</span>
+  <span class="code-keyword">val</span> mission: <span class="code-type">String</span> = <span class="code-string">"Build premium, offline-first mobile apps"</span>
 )</pre>
+              <pre class="code-content" id="code-dart" style="display: none;"><span class="code-keyword">class</span> <span class="code-class">Developer</span> {
+  <span class="code-keyword">final</span> <span class="code-type">String</span> name = <span class="code-string">"Gulshan Kumar"</span>;
+  <span class="code-keyword">final</span> <span class="code-type">String</span> role = <span class="code-string">"Flutter &amp; Dart Engineer"</span>;
+  <span class="code-keyword">final</span> <span class="code-type">List&lt;String&gt;</span> focus = [
+    <span class="code-string">"Cross-platform"</span>, <span class="code-string">"Material Design 3"</span>,
+    <span class="code-string">"Clean Architecture"</span>, <span class="code-string">"BLoC"</span>, <span class="code-string">"GetX"</span>
+  ];
+  <span class="code-keyword">final</span> <span class="code-type">String</span> goal = <span class="code-string">"Ship high-fidelity responsive apps"</span>;
+}</pre>
+              <pre class="code-content" id="code-py" style="display: none;"><span class="code-keyword">class</span> <span class="code-class">Developer</span>:
+    <span class="code-keyword">def</span> <span class="code-func">__init__</span>(self):
+        self.name = <span class="code-string">"Gulshan Kumar"</span>
+        self.specialty = <span class="code-string">"AI / Machine Learning"</span>
+        self.frameworks = [
+            <span class="code-string">"TensorFlow"</span>, <span class="code-string">"NLP"</span>, <span class="code-string">"Python"</span>,
+            <span class="code-string">"Data Analysis"</span>, <span class="code-string">"Pandas"</span>
+        ]
+        self.mission = <span class="code-string">"Build intelligent helper agents &amp; models"</span></pre>
+            </div>
           </div>
         </div>
       </div>
@@ -854,6 +871,43 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating Dev Terminal Drawer -->
+  <div class="terminal-container" id="terminal-container">
+    <button class="terminal-toggle-btn" id="terminal-toggle-btn" aria-label="Toggle Dev Console">
+      <span class="terminal-btn-icon">⚡</span>
+      <span class="terminal-btn-text">Dev Console</span>
+    </button>
+    <div class="terminal-drawer" id="terminal-drawer">
+      <div class="terminal-header">
+        <div class="terminal-header-title">
+          <span class="terminal-icon">🖥️</span>
+          <span>guest@gulshan-portfolio: ~</span>
+        </div>
+        <div class="terminal-header-actions">
+          <button class="terminal-action-btn btn-min" id="terminal-min-btn" aria-label="Minimize terminal">—</button>
+          <button class="terminal-action-btn btn-close" id="terminal-close-btn" aria-label="Close terminal">×</button>
+        </div>
+      </div>
+      <div class="terminal-body" id="terminal-body">
+        <div class="terminal-output" id="terminal-output">
+          <div class="output-line system-welcome">Welcome to Gulshan's Interactive Portfolio Console!</div>
+          <div class="output-line system-hint">Type <span class="cmd-highlight">help</span> to view available commands, or click a quick shortcut:</div>
+          <div class="terminal-suggestions">
+            <button class="suggestion-tag" data-cmd="about">about</button>
+            <button class="suggestion-tag" data-cmd="skills">skills</button>
+            <button class="suggestion-tag" data-cmd="projects">projects</button>
+            <button class="suggestion-tag" data-cmd="build">build</button>
+            <button class="suggestion-tag" data-cmd="clear">clear</button>
+          </div>
+        </div>
+        <div class="terminal-input-row">
+          <span class="terminal-prompt">guest@gulshan:~$</span>
+          <input type="text" class="terminal-input" id="terminal-input" placeholder="Type a command..." autofocus autocomplete="off" />
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
