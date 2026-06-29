@@ -409,6 +409,34 @@ terminalInput.addEventListener('keydown', (e) => {
   }
 });
 
+// ===== THEME TOGGLE (LIGHT / DARK) =====
+const themeToggleBtn = document.getElementById('theme-toggle');
+
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('portfolio-theme', theme);
+}
+
+const savedTheme = localStorage.getItem('portfolio-theme');
+const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if (savedTheme === 'light') {
+  setTheme('light');
+} else if (savedTheme === 'dark') {
+  setTheme('dark');
+} else {
+  setTheme(systemPrefersDark ? 'dark' : 'light');
+}
+
+themeToggleBtn.addEventListener('click', () => {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  if (currentTheme === 'light') {
+    setTheme('dark');
+  } else {
+    setTheme('light');
+  }
+});
+
 console.log('%c👋 Hey there! I\'m Gulshan Kumar', 'color: #a78bfa; font-size: 18px; font-weight: bold;');
 console.log('%c🚀 Android & Flutter Developer | AI/ML Enthusiast', 'color: #06b6d4; font-size: 14px;');
 console.log('%c📬 Get in touch: gushan76542@gmail.com', 'color: #f59e0b; font-size: 12px;');
