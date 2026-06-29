@@ -458,9 +458,7 @@
             <span class="tech-pill">Google Sheets API</span>
             <span class="tech-pill">TelephonyManager</span>
           </div>
-          <button class="btn btn-primary btn-simulate" data-app="leaddialer" style="margin-top:1.5rem; width:100%; justify-content:center; gap:8px;">
-            Simulate App 📱
-          </button>
+
         </div>
         <div class="project-glow crm-glow"></div>
       </div>
@@ -567,9 +565,7 @@
               <span class="tech-pill">Gamification</span>
               <span class="tech-pill">SVG Charts</span>
             </div>
-            <button class="btn btn-primary btn-simulate" data-app="student" style="margin-top:1.5rem; width:100%; justify-content:center; gap:8px;">
-              Simulate App 📱
-            </button>
+
           </div>
           <div class="project-glow student-glow"></div>
         </div>
@@ -609,9 +605,7 @@
               <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
               Adyapan Edutech Private Limited
             </div>
-            <button class="btn btn-primary btn-simulate" data-app="admin" style="margin-top:1.5rem; width:100%; justify-content:center; gap:8px;">
-              Simulate App 📱
-            </button>
+
           </div>
           <div class="project-glow admin-glow"></div>
         </div>
@@ -922,189 +916,6 @@
     </div>
   </div>
 
-  <!-- Interactive Mobile App Simulator Modal -->
-  <div class="simulator-modal" id="simulator-modal" aria-hidden="true">
-    <div class="simulator-backdrop" id="simulator-backdrop"></div>
-    <div class="simulator-container">
-      <div class="simulator-sidebar">
-        <h3>App Simulator</h3>
-        <p class="sidebar-info">Experience Gulshan's shipped production apps directly in this interactive mobile simulator.</p>
-        <div class="sim-selector-tabs">
-          <button class="sim-tab-btn active" data-sim="leaddialer">
-            <span class="sim-tab-dot crm-dot"></span>
-            <div class="sim-tab-text">
-              <span class="sim-tab-title">LeadDialer</span>
-              <span class="sim-tab-subtitle">Kotlin · Solo CRM</span>
-            </div>
-          </button>
-          <button class="sim-tab-btn" data-sim="student">
-            <span class="sim-tab-dot student-dot"></span>
-            <div class="sim-tab-text">
-              <span class="sim-tab-title">Student App</span>
-              <span class="sim-tab-subtitle">Flutter · Learning</span>
-            </div>
-          </button>
-          <button class="sim-tab-btn" data-sim="admin">
-            <span class="sim-tab-dot admin-dot"></span>
-            <div class="sim-tab-text">
-              <span class="sim-tab-title">Admin App</span>
-              <span class="sim-tab-subtitle">Flutter · School</span>
-            </div>
-          </button>
-        </div>
-        <button class="btn btn-secondary close-simulator-btn" id="close-sim-sidebar-btn">Close Simulator</button>
-      </div>
-
-      <div class="sim-phone-wrapper">
-        <button class="close-sim-circle" id="close-sim-circle-btn" aria-label="Close Simulator">&times;</button>
-        
-        <!-- Phone Frame Mockup -->
-        <div class="phone-frame">
-          <div class="phone-speaker"></div>
-          <div class="phone-island"></div>
-          
-          <!-- Screen Content -->
-          <div class="phone-screen">
-            <!-- Simulated Status Bar -->
-            <div class="phone-status-bar">
-              <span class="status-time" id="status-time">14:40</span>
-              <div class="status-icons">
-                <span class="status-icon">📶</span>
-                <span class="status-icon">🛜</span>
-                <span class="status-icon">🔋 87%</span>
-              </div>
-            </div>
-
-            <!-- Notification Banner (Slide down animation) -->
-            <div class="phone-notification" id="phone-notification">
-              <div class="notification-icon">🔔</div>
-              <div class="notification-content">
-                <div class="notification-title">System Update</div>
-                <div class="notification-body">Leave request approved!</div>
-              </div>
-            </div>
-
-            <!-- Outgoing Call Overlay -->
-            <div class="phone-call-overlay" id="phone-call-overlay">
-              <div class="call-avatar">📞</div>
-              <div class="call-name" id="call-screen-name">Aman Sharma</div>
-              <div class="call-status">Calling...</div>
-              <div class="call-ripples">
-                <span class="ripple"></span>
-                <span class="ripple"></span>
-              </div>
-              <button class="call-end-btn" id="call-end-btn">End Call</button>
-            </div>
-
-            <!-- APP 1: LeadDialer CRM Screen -->
-            <div class="sim-app active" id="sim-app-leaddialer">
-              <div class="app-navbar leaddialer-nav">
-                <span class="app-nav-title">LeadDialer CRM</span>
-                <span class="app-nav-role">Agent</span>
-              </div>
-              <div class="app-body">
-                <div class="app-dashboard-stats">
-                  <div class="app-stat-card"><span class="stat-val" id="ld-sim-calls">12</span><span class="stat-lbl">Calls logged</span></div>
-                  <div class="app-stat-card"><span class="stat-val">🟢</span><span class="stat-lbl">Attendance</span></div>
-                </div>
-                <div class="app-section-header">Recent Lead Queue</div>
-                <div class="lead-list">
-                  <div class="lead-card">
-                    <div class="lead-info">
-                      <span class="lead-name">Aman Sharma</span>
-                      <span class="lead-phone">+91 98765 43210</span>
-                      <span class="lead-status status-pending" id="lead-status-aman">Pending Callback</span>
-                    </div>
-                    <div class="lead-actions">
-                      <button class="btn-app-action call" data-lead="Aman Sharma">Call</button>
-                      <button class="btn-app-action whatsapp" data-lead="Aman Sharma">WhatsApp</button>
-                    </div>
-                  </div>
-                  <div class="lead-card">
-                    <div class="lead-info">
-                      <span class="lead-name">Priya Patel</span>
-                      <span class="lead-phone">+91 87654 32109</span>
-                      <span class="lead-status status-completed">Completed</span>
-                    </div>
-                    <div class="lead-actions">
-                      <button class="btn-app-action call disabled" disabled>Call</button>
-                      <button class="btn-app-action whatsapp disabled" disabled>WhatsApp</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- APP 2: Student App Screen -->
-            <div class="sim-app" id="sim-app-student" style="display: none;">
-              <div class="app-navbar student-nav">
-                <span class="app-nav-title">Student Portal</span>
-                <span class="student-xp">⭐ 1,250 XP</span>
-              </div>
-              <div class="app-body">
-                <div class="student-profile-row">
-                  <div class="student-avatar-sim">🎓</div>
-                  <div class="student-welcome-sim">
-                    <div>Welcome back!</div>
-                    <strong>Class 10 Student</strong>
-                  </div>
-                </div>
-                <div class="pomodoro-card">
-                  <div class="pomo-title">⏱️ Pomodoro Focus Timer</div>
-                  <div class="pomo-timer" id="pomo-timer">25:00</div>
-                  <div class="pomo-controls">
-                    <button class="btn-pomo-control start" id="pomo-start-btn">Start</button>
-                    <button class="btn-pomo-control reset" id="pomo-reset-btn">Reset</button>
-                  </div>
-                </div>
-                <div class="app-section-header">My Roadmap</div>
-                <div class="roadmap-tree">
-                  <div class="tree-node active"><span>Math Roadmap</span><span class="node-status">100%</span></div>
-                  <div class="tree-node active"><span>Coding Trees</span><span class="node-status">75%</span></div>
-                  <div class="tree-node"><span>AI Basics</span><span class="node-status">Locked</span></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- APP 3: Admin App Screen -->
-            <div class="sim-app" id="sim-app-admin" style="display: none;">
-              <div class="app-navbar admin-nav">
-                <span class="app-nav-title">Principal Panel</span>
-                <span class="admin-badge-sim">Admin</span>
-              </div>
-              <div class="app-body">
-                <div class="admin-stats-grid">
-                  <div class="admin-stat-box"><span class="admin-stat-num">94%</span><span class="admin-stat-lbl">Attendance</span></div>
-                  <div class="admin-stat-box"><span class="admin-stat-num" id="admin-pending-count">1</span><span class="admin-stat-lbl">Leave Requests</span></div>
-                </div>
-                <div class="app-section-header">Leave Approvals</div>
-                <div class="leave-list">
-                  <div class="leave-card" id="leave-card-rohan">
-                    <div class="leave-details">
-                      <strong>Rohan Sen (Class 8)</strong>
-                      <span>Reason: Medical checkup</span>
-                      <span class="leave-date">Today · Session 1</span>
-                    </div>
-                    <div class="leave-actions-sim">
-                      <button class="btn-leave-approve" id="leave-approve-btn">Approve</button>
-                      <button class="btn-leave-reject" id="leave-reject-btn">Reject</button>
-                    </div>
-                  </div>
-                  <div class="leave-no-requests" id="leave-empty-state" style="display: none;">
-                    No pending approval requests.
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Simulated Phone Home Indicator -->
-            <div class="phone-home-indicator"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js?v=2.2"></script>
+  <script src="script.js"></script>
 </body>
 </html>
