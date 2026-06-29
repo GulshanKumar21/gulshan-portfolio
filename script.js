@@ -437,6 +437,225 @@ themeToggleBtn.addEventListener('click', () => {
   }
 });
 
+// ===== INTERACTIVE MOBILE APP SIMULATOR =====
+const simModal = document.getElementById('simulator-modal');
+const simBackdrop = document.getElementById('simulator-backdrop');
+const closeSimCircleBtn = document.getElementById('close-sim-circle-btn');
+const closeSimSidebarBtn = document.getElementById('close-sim-sidebar-btn');
+const simTabBtns = document.querySelectorAll('.sim-tab-btn');
+const simApps = document.querySelectorAll('.sim-app');
+
+function openSimulator(appName) {
+  simModal.classList.add('open');
+  simModal.setAttribute('aria-hidden', 'false');
+  switchSimApp(appName);
+}
+
+function closeSimulator() {
+  simModal.classList.remove('open');
+  simModal.setAttribute('aria-hidden', 'true');
+  stopPomodoroTimer();
+  hideNotification();
+  endCall();
+}
+
+if (closeSimCircleBtn) closeSimCircleBtn.addEventListener('click', closeSimulator);
+if (closeSimSidebarBtn) closeSimSidebarBtn.addEventListener('click', closeSimulator);
+if (simBackdrop) simBackdrop.addEventListener('click', closeSimulator);
+
+document.querySelectorAll('.btn-simulate').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const app = btn.getAttribute('data-app');
+    openSimulator(app);
+  });
+});
+
+function switchSimApp(appName) {
+  simTabBtns.forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.getAttribute('data-sim') === appName) {
+      btn.classList.add('active');
+    }
+  });
+
+  simApps.forEach(app => {
+    app.classList.remove('active');
+    app.style.display = 'none';
+    if (app.id === `sim-app-${appName}`) {
+      app.classList.add('active');
+      app.style.display = 'flex';
+    }
+  });
+
+  if (appName === 'student') {
+    resetPomodoroTimer();
+  }
+}
+
+simTabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const app = btn.getAttribute('data-sim');
+    switchSimApp(app);
+  });
+});
+
+function updateStatusBarTime() {
+  const clockEl = document.getElementById('status-time');
+  if (clockEl) {
+    const now = new Date();
+    const hrs = String(now.getHours()).padStart(2, '0');
+    const mins = String(now.getMinutes()).padStart(2, '0');
+    clockEl.textContent = `${hrs}:${mins}`;
+  }
+}
+setInterval(updateStatusBarTime, 1000);
+updateStatusBarTime();
+
+// --- APP 1: LeadDialer Sim Calling ---
+const callOverlay = document.getElementById('phone-call-overlay');
+const callScreenName = document.getElementById('call-screen-name');
+const callEndBtn = document.getElementById('call-end-btn');
+const ldCallsCountVal = document.getElementById('ld-sim-calls');
+let simCallsCount = 12;
+
+document.querySelectorAll('#sim-app-leaddialer .btn-app-action.call').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const leadName = btn.getAttribute('data-lead');
+    callScreenName.textContent = leadName;
+    callOverlay.classList.add('active');
+  });
+});
+
+function endCall() {
+  if (callOverlay && callOverlay.classList.contains('active')) {
+    callOverlay.classList.remove('active');
+    simCallsCount++;
+    if (ldCallsCountVal) {
+      ldCallsCountVal.textContent = simCallsCount;
+    }
+    const amanStatus = document.getElementById('lead-status-aman');
+    if (amanStatus) {
+      amanStatus.textContent = 'Completed';
+      amanStatus.className = 'lead-status status-completed';
+      const amanCallBtn = document.querySelector('#sim-app-leaddialer .btn-app-action.call');
+      const amanWaBtn = document.querySelector('#sim-app-leaddialer .btn-app-action.whatsapp');
+      if (amanCallBtn) amanCallBtn.classList.add('disabled');
+      if (amanWaBtn) amanWaBtn.classList.add('disabled');
+    }
+  }
+}
+
+if (callEndBtn) callEndBtn.addEventListener('click', endCall);
+
+document.querySelectorAll('#sim-app-leaddialer .btn-app-action.whatsapp').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (btn.classList.contains('disabled')) return;
+    const leadName = btn.getAttribute('data-lead');
+    alert(`WhatsApp message pre-filled to sync with ${leadName}!`);
+  });
+});
+
+// --- APP 2: Student App Pomodoro Timer ---
+const pomoTimerEl = document.getElementById('pomo-timer');
+const pomoStartBtn = document.getElementById('pomo-start-btn');
+const pomoResetBtn = document.getElementById('pomo-reset-btn');
+let pomoInterval = null;
+let pomoSecondsLeft = 25 * 60;
+
+function updatePomoDisplay() {
+  if (pomoTimerEl) {
+    const mins = String(Math.floor(pomoSecondsLeft / 60)).padStart(2, '0');
+    const secs = String(pomoSecondsLeft % 60).padStart(2, '0');
+    pomoTimerEl.textContent = `${mins}:${secs}`;
+  }
+}
+
+function startPomodoroTimer() {
+  if (pomoInterval) {
+    clearInterval(pomoInterval);
+    pomoInterval = null;
+    pomoStartBtn.textContent = 'Start';
+    pomoStartBtn.style.background = 'var(--primary)';
+  } else {
+    pomoStartBtn.textContent = 'Pause';
+    pomoStartBtn.style.background = '#ef4444';
+    pomoInterval = setInterval(() => {
+      if (pomoSecondsLeft > 0) {
+        pomoSecondsLeft--;
+        updatePomoDisplay();
+      } else {
+        clearInterval(pomoInterval);
+        pomoInterval = null;
+        alert('Focus session completed! Get some rest! 🌟');
+        resetPomodoroTimer();
+      }
+    }, 1000);
+  }
+}
+
+function resetPomodoroTimer() {
+  stopPomodoroTimer();
+  pomoSecondsLeft = 25 * 60;
+  updatePomoDisplay();
+}
+
+function stopPomodoroTimer() {
+  if (pomoInterval) {
+    clearInterval(pomoInterval);
+    pomoInterval = null;
+  }
+  if (pomoStartBtn) {
+    pomoStartBtn.textContent = 'Start';
+    pomoStartBtn.style.background = 'var(--primary)';
+  }
+}
+
+if (pomoStartBtn) pomoStartBtn.addEventListener('click', startPomodoroTimer);
+if (pomoResetBtn) pomoResetBtn.addEventListener('click', resetPomodoroTimer);
+
+// --- APP 3: Admin App Approvals & Push ---
+const leaveCardRohan = document.getElementById('leave-card-rohan');
+const leaveEmptyState = document.getElementById('leave-empty-state');
+const leaveApproveBtn = document.getElementById('leave-approve-btn');
+const leaveRejectBtn = document.getElementById('leave-reject-btn');
+const adminPendingCountEl = document.getElementById('admin-pending-count');
+const phoneNotification = document.getElementById('phone-notification');
+let notificationTimeout = null;
+
+function showPushNotification(text) {
+  if (!phoneNotification) return;
+  const notifyBody = phoneNotification.querySelector('.notification-body');
+  if (notifyBody) notifyBody.textContent = text;
+  
+  phoneNotification.classList.add('active');
+  
+  if (notificationTimeout) clearTimeout(notificationTimeout);
+  notificationTimeout = setTimeout(hideNotification, 3500);
+}
+
+function hideNotification() {
+  if (phoneNotification) phoneNotification.classList.remove('active');
+}
+
+function processLeaveAction(isApproved) {
+  if (leaveCardRohan) {
+    leaveCardRohan.style.display = 'none';
+    if (leaveEmptyState) leaveEmptyState.style.display = 'block';
+    if (adminPendingCountEl) adminPendingCountEl.textContent = '0';
+    
+    const statusText = isApproved ? 'Rohan Sen\'s leave approved! ✔' : 'Rohan Sen\'s leave rejected. ❌';
+    showPushNotification(statusText);
+  }
+}
+
+if (leaveApproveBtn) {
+  leaveApproveBtn.addEventListener('click', () => processLeaveAction(true));
+}
+if (leaveRejectBtn) {
+  leaveRejectBtn.addEventListener('click', () => processLeaveAction(false));
+}
+
 console.log('%c👋 Hey there! I\'m Gulshan Kumar', 'color: #a78bfa; font-size: 18px; font-weight: bold;');
 console.log('%c🚀 Android & Flutter Developer | AI/ML Enthusiast', 'color: #06b6d4; font-size: 14px;');
 console.log('%c📬 Get in touch: gushan76542@gmail.com', 'color: #f59e0b; font-size: 12px;');
