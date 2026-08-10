@@ -304,6 +304,19 @@ body {
   transform: translateY(-2px);
 }
 .btn-large { padding: 16px 36px; font-size: 1.05rem; }
+.btn-resume {
+  background: linear-gradient(135deg, #059669, #10b981);
+  color: white;
+  box-shadow: 0 4px 20px rgba(16,185,129,0.35);
+  border: 1px solid rgba(16,185,129,0.4);
+}
+.btn-resume:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(16,185,129,0.55);
+  background: linear-gradient(135deg, #047857, #059669);
+}
+.btn-resume svg { flex-shrink: 0; }
+
 
 .hero-stats {
   display: flex; align-items: center; gap: 2rem;
@@ -893,6 +906,19 @@ body {
 .flutter-app { background: rgba(84,197,248,0.15); color: var(--flutter); }
 .app-name { display: block; font-size: 0.9rem; font-weight: 600; }
 .app-platform { font-size: 0.75rem; color: var(--text-muted); }
+/* Responsibilities list */
+.exp-responsibilities { margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.55rem; }
+.resp-item {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.03);
+  border-left: 3px solid var(--primary);
+  line-height: 1.5;
+  transition: var(--transition);
+}
+.resp-item:hover { background: rgba(124,58,237,0.08); border-left-color: var(--accent); }
 .exp-skills { display: flex; flex-wrap: wrap; gap: 8px; }
 .skill-pill {
   padding: 5px 12px; border-radius: 50px;
@@ -1060,7 +1086,8 @@ body {
 .contact-link { font-size: 0.85rem; color: var(--text-secondary); text-decoration: none; transition: var(--transition); word-break: break-all; }
 .contact-link:hover { color: var(--primary-light); }
 .contact-cta { text-align: center; }
-.contact-cta p { font-size: 1rem; color: var(--text-secondary); margin-bottom: 1.5rem; }
+.contact-cta p { font-size: 1rem; color: var(--text-secondary); margin-bottom: 0.5rem; }
+.contact-sub { font-size: 0.9rem !important; color: var(--text-muted) !important; }
 
 /* ===== FOOTER ===== */
 .footer {
