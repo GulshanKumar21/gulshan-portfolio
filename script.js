@@ -189,6 +189,7 @@ const counterObs = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       const el = entry.target;
       const val = parseInt(el.textContent);
+      if (isNaN(val)) { counterObs.unobserve(el); return; } // skip text values
       const suffix = el.textContent.replace(/[0-9]/g, '');
       el.dataset.suffix = suffix;
       animateCounter(el, val);
