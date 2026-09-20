@@ -15,7 +15,7 @@ function createParticles() {
       opacity: ${Math.random() * 0.5 + 0.1};
     `;
     // Vary colors
-    const colors = ['#7c3aed', '#a78bfa', '#06b6d4', '#f59e0b'];
+    const colors = ['#00f59b', '#00d2ff', '#8b5cf6', '#fbbf24'];
     p.style.background = colors[Math.floor(Math.random() * colors.length)];
     container.appendChild(p);
   }
@@ -136,7 +136,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
       navLinkEls.forEach(link => {
         link.style.color = '';
         if (link.getAttribute('href') === `#${entry.target.id}`) {
-          link.style.color = '#a78bfa';
+          link.style.color = '#00f59b';
         }
       });
     }
