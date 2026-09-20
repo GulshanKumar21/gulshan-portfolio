@@ -227,6 +227,14 @@ filterButtons.forEach(btn => {
     filterButtons.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     const filterValue = btn.getAttribute('data-filter');
+    const projectsGrid = document.querySelector('.projects-grid');
+    if (projectsGrid) {
+      if (filterValue === 'all') {
+        projectsGrid.classList.remove('is-filtered');
+      } else {
+        projectsGrid.classList.add('is-filtered');
+      }
+    }
 
     filterItems.forEach(item => {
       if (filterValue === 'all' || item.classList.contains(filterValue)) {
