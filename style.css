@@ -810,6 +810,145 @@ body::before {
   transform: translateY(-2px);
 }
 
+/* ===== MOBILE ARCHITECTURE PILLARS ===== */
+.pillars-section {
+  position: relative;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.8rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.pillar-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: var(--t-normal);
+  padding: 2.2rem;
+}
+.pillar-card:hover {
+  transform: translateY(-6px);
+  background: var(--bg-card-hover);
+}
+
+#pillar-ui:hover {
+  border-color: rgba(0, 210, 255, 0.45);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 210, 255, 0.15);
+}
+#pillar-data:hover {
+  border-color: rgba(0, 245, 155, 0.45);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 245, 155, 0.15);
+}
+#pillar-sync:hover {
+  border-color: rgba(139, 92, 246, 0.45);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 30px rgba(139, 92, 246, 0.15);
+}
+#pillar-security:hover {
+  border-color: rgba(251, 191, 36, 0.45);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 30px rgba(251, 191, 36, 0.15);
+}
+
+.pillar-card-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pillar-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+  border: 1px solid;
+  transition: var(--t-fast);
+}
+.ui-icon { background: rgba(0, 210, 255, 0.12); color: var(--cyan); border-color: rgba(0, 210, 255, 0.3); }
+.data-icon { background: rgba(0, 245, 155, 0.12); color: var(--primary); border-color: rgba(0, 245, 155, 0.3); }
+.sync-icon { background: rgba(139, 92, 246, 0.12); color: #c084fc; border-color: rgba(139, 92, 246, 0.3); }
+.security-icon { background: rgba(251, 191, 36, 0.12); color: var(--amber); border-color: rgba(251, 191, 36, 0.3); }
+
+.pillar-card:hover .pillar-icon {
+  transform: scale(1.1) rotate(4deg);
+}
+
+.pillar-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+}
+
+.pillar-card p {
+  font-size: 0.94rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+.pillar-card p strong {
+  color: var(--text-primary);
+}
+
+.pillar-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.pillar-tech-tag {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color);
+  padding: 5px 12px;
+  border-radius: 8px;
+  transition: var(--t-fast);
+}
+#pillar-ui:hover .pillar-tech-tag { color: var(--cyan); border-color: rgba(0, 210, 255, 0.3); background: rgba(0, 210, 255, 0.08); }
+#pillar-data:hover .pillar-tech-tag { color: var(--primary); border-color: rgba(0, 245, 155, 0.3); background: rgba(0, 245, 155, 0.08); }
+#pillar-sync:hover .pillar-tech-tag { color: #c084fc; border-color: rgba(139, 92, 246, 0.3); background: rgba(139, 92, 246, 0.08); }
+#pillar-security:hover .pillar-tech-tag { color: var(--amber); border-color: rgba(251, 191, 36, 0.3); background: rgba(251, 191, 36, 0.08); }
+
+.pillar-glow {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  opacity: 0.12;
+  transition: opacity 0.4s ease;
+  bottom: -40px;
+  right: -40px;
+}
+.ui-glow { background: var(--cyan); }
+.data-glow { background: var(--primary); }
+.sync-glow { background: var(--purple); }
+.security-glow { background: var(--amber); }
+
+.pillar-card:hover .pillar-glow {
+  opacity: 0.35;
+}
+
 /* ===== FEATURED PROJECTS — TRUE BENTO GRID ===== */
 .filter-bar {
   display: flex;
@@ -1656,6 +1795,10 @@ body::before {
   }
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
   .projects-grid {
     grid-template-columns: 1fr;
