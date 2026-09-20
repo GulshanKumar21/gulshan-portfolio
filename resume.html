@@ -6,7 +6,7 @@
   <style>
     @page {
       size: letter;
-      margin: 8mm 11mm 6mm 11mm;
+      margin: 7mm 11mm 6mm 11mm;
     }
     * {
       box-sizing: border-box;
@@ -17,8 +17,8 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color: #0f172a;
       background: #ffffff;
-      line-height: 1.28;
-      font-size: 8.4pt;
+      line-height: 1.26;
+      font-size: 8.3pt;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
@@ -34,34 +34,34 @@
     /* Header */
     .header {
       text-align: center;
-      margin-bottom: 5px;
-      padding-bottom: 4px;
+      margin-bottom: 4px;
+      padding-bottom: 3.5px;
       border-bottom: 2px solid #0f172a;
     }
     .name {
-      font-size: 20pt;
+      font-size: 19.5pt;
       font-weight: 800;
       color: #0f172a;
       letter-spacing: 0.8px;
       text-transform: uppercase;
       line-height: 1.05;
-      margin-bottom: 2px;
+      margin-bottom: 1.5px;
     }
     .role-title {
-      font-size: 9.0pt;
+      font-size: 8.8pt;
       font-weight: 700;
       color: #2563eb;
       letter-spacing: 0.3px;
-      margin-bottom: 3px;
+      margin-bottom: 2.5px;
     }
     .contact-line {
-      font-size: 8.0pt;
+      font-size: 7.9pt;
       color: #334155;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 7px;
-      margin-bottom: 1.5px;
+      margin-bottom: 1px;
     }
     .contact-sep {
       color: #94a3b8;
@@ -70,18 +70,37 @@
     
     /* Section Styling */
     .section {
-      margin-top: 4.5px;
-      margin-bottom: 3px;
+      margin-top: 4px;
+      margin-bottom: 2.5px;
     }
     .section-heading {
-      font-size: 9.0pt;
+      font-size: 8.9pt;
       font-weight: 800;
       color: #0f172a;
       text-transform: uppercase;
       letter-spacing: 0.5px;
       border-bottom: 1.2px solid #0f172a;
-      padding-bottom: 1px;
-      margin-bottom: 2.5px;
+      padding-bottom: 0.5px;
+      margin-bottom: 2px;
+    }
+    
+    /* Skills: Each in one single row */
+    .skills-block {
+      margin-top: 1.5px;
+      margin-bottom: 1.5px;
+    }
+    .skill-row {
+      font-size: 8.0pt;
+      color: #1e293b;
+      line-height: 1.25;
+      margin-bottom: 1px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .skill-row strong {
+      color: #0f172a;
+      font-weight: 700;
     }
     
     /* Item Header */
@@ -89,21 +108,21 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-top: 2px;
+      margin-top: 1.5px;
       margin-bottom: 0.5px;
     }
     .item-primary {
-      font-size: 8.8pt;
+      font-size: 8.6pt;
       font-weight: 700;
       color: #0f172a;
     }
     .item-secondary {
-      font-size: 8.4pt;
+      font-size: 8.2pt;
       font-weight: 600;
       color: #334155;
     }
     .item-date {
-      font-size: 8.0pt;
+      font-size: 7.9pt;
       font-weight: 600;
       color: #475569;
       white-space: nowrap;
@@ -112,14 +131,14 @@
     /* Live Badge */
     .play-badge {
       display: inline-block;
-      font-size: 6.8pt;
+      font-size: 6.6pt;
       font-weight: 700;
       color: #047857;
       background: #ecfdf5;
       border: 1px solid #6ee7b7;
-      padding: 0.5px 4px;
-      border-radius: 4px;
-      margin-left: 4px;
+      padding: 0.5px 3.5px;
+      border-radius: 3px;
+      margin-left: 3px;
       vertical-align: middle;
       letter-spacing: 0.2px;
     }
@@ -128,59 +147,37 @@
     ul {
       list-style: none;
       padding-left: 0;
-      margin-top: 1px;
-      margin-bottom: 1.5px;
+      margin-top: 0.5px;
+      margin-bottom: 1px;
     }
     li {
       position: relative;
-      padding-left: 12px;
-      margin-bottom: 1.2px;
+      padding-left: 11px;
+      margin-bottom: 1px;
       color: #1e293b;
-      font-size: 8.2pt;
+      font-size: 8.0pt;
       text-align: left;
-      line-height: 1.25;
+      line-height: 1.22;
     }
     li::before {
       content: "•";
       position: absolute;
       left: 1px;
       color: #0f172a;
-      font-size: 8.5pt;
+      font-size: 8.2pt;
       line-height: 1;
-      top: 1px;
+      top: 0.5px;
     }
     li strong {
       color: #0f172a;
       font-weight: 700;
     }
     .tech-stack {
-      font-size: 7.8pt;
+      font-size: 7.6pt;
       color: #475569;
       margin-top: 0.5px;
-      margin-left: 12px;
-      margin-bottom: 2px;
-    }
-    
-    /* Technical Skills Table */
-    .skills-grid {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 8.1pt;
-      margin-top: 1px;
-    }
-    .skills-grid td {
-      padding: 0.8px 0;
-      vertical-align: top;
-      text-align: left;
-    }
-    .skills-label {
-      font-weight: 700;
-      color: #0f172a;
-      width: 148px;
-      white-space: nowrap;
-    }
-    .skills-content {
-      color: #1e293b;
+      margin-left: 11px;
+      margin-bottom: 1.5px;
     }
 
     /* Cert item */
@@ -188,19 +185,19 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      padding-left: 12px;
+      padding-left: 11px;
       position: relative;
-      margin-bottom: 1px;
-      font-size: 8.2pt;
+      margin-bottom: 0.8px;
+      font-size: 8.0pt;
     }
     .cert-row::before {
       content: "•";
       position: absolute;
       left: 1px;
       color: #0f172a;
-      font-size: 8.5pt;
+      font-size: 8.2pt;
       line-height: 1;
-      top: 1px;
+      top: 0.5px;
     }
   </style>
 </head>
@@ -226,7 +223,20 @@
     </div>
   </div>
 
-  <!-- Professional Experience -->
+  <!-- SKILLS (Top Position - Single Row Per Category) -->
+  <div class="section">
+    <div class="section-heading">Skills</div>
+    <div class="skills-block">
+      <div class="skill-row">• <strong>Programming Languages:</strong> Java, Kotlin, Python, Dart, SQL, C/C++</div>
+      <div class="skill-row">• <strong>Mobile Development:</strong> Android (Kotlin, Java), Jetpack Compose, Flutter (Dart), XML Layouts, Activity &amp; Fragment Lifecycle</div>
+      <div class="skill-row">• <strong>Frameworks &amp; Architecture:</strong> Android SDK, Jetpack Components (ViewModel, LiveData, StateFlow, Navigation), MVVM, Coroutines</div>
+      <div class="skill-row">• <strong>Databases &amp; Cloud:</strong> SQL, SQLite, Room DB, Firebase Firestore, Realtime DB, Cloud Messaging (FCM), Storage</div>
+      <div class="skill-row">• <strong>Tools &amp; Platforms:</strong> Android Studio, VS Code, Git, GitHub, Linux, Google Play Console, Postman, Google Colab</div>
+      <div class="skill-row">• <strong>Soft Skills:</strong> Adaptability, Teamwork, Leadership, Critical Thinking, Problem Solving, Agile Collaboration</div>
+    </div>
+  </div>
+
+  <!-- PROFESSIONAL EXPERIENCE -->
   <div class="section">
     <div class="section-heading">Professional Experience</div>
     
@@ -234,7 +244,7 @@
     <div class="item-row">
       <div>
         <span class="item-primary">Adyapan Edutech Private Limited</span>
-        <span class="item-secondary">· Android & Flutter Developer (Full-Time)</span>
+        <span class="item-secondary">· Android &amp; Flutter Developer (Full-Time)</span>
       </div>
       <span class="item-date">Sep 2026 – Present</span>
     </div>
@@ -244,10 +254,10 @@
     </ul>
 
     <!-- Adyapan Edutech - Internship -->
-    <div class="item-row" style="margin-top: 2px;">
+    <div class="item-row" style="margin-top: 1.5px;">
       <div>
         <span class="item-primary">Adyapan Edutech Private Limited</span>
-        <span class="item-secondary">· Android & Flutter Developer Intern</span>
+        <span class="item-secondary">· Android &amp; Flutter Developer Intern</span>
       </div>
       <span class="item-date">Mar 2026 – Aug 2026</span>
     </div>
@@ -258,7 +268,7 @@
     </ul>
   </div>
 
-  <!-- Projects (From Old Resume + Play Store Live Link) -->
+  <!-- PROJECTS (Old Resume Projects + Google Play Live) -->
   <div class="section">
     <div class="section-heading">Projects</div>
     
@@ -267,9 +277,9 @@
       <div>
         <span class="item-primary">Zoo Explorer (ZooVerse)</span>
         <span class="play-badge">🟢 LIVE ON GOOGLE PLAY</span>
-        <span style="font-size: 7.8pt; margin-left: 4px;">
+        <span style="font-size: 7.6pt; margin-left: 3px;">
           [<a href="https://play.google.com/store/apps/details?id=com.wildlife.zooexplorer" target="_blank">Google Play ↗</a>] 
-          [<a href="https://github.com/Gulshankumar21" target="_blank">GitHub ↗</a>]
+          [<a href="https://github.com/GulshanKumar21" target="_blank">GitHub ↗</a>]
         </span>
       </div>
       <span class="item-date">Apr 2025</span>
@@ -285,7 +295,7 @@
     <div class="item-row">
       <div>
         <span class="item-primary">Tic Tac Toe – Android Game with Computer AI</span>
-        <span style="font-size: 7.8pt; margin-left: 4px;">[<a href="https://github.com/Gulshankumar21" target="_blank">GitHub ↗</a>]</span>
+        <span style="font-size: 7.6pt; margin-left: 3px;">[<a href="https://github.com/GulshanKumar21" target="_blank">GitHub ↗</a>]</span>
       </div>
       <span class="item-date">Nov 2024</span>
     </div>
@@ -300,7 +310,7 @@
     <div class="item-row">
       <div>
         <span class="item-primary">Learning Management System (LMS)</span>
-        <span style="font-size: 7.8pt; margin-left: 4px;">[<a href="https://github.com/Gulshankumar21" target="_blank">GitHub ↗</a>]</span>
+        <span style="font-size: 7.6pt; margin-left: 3px;">[<a href="https://github.com/GulshanKumar21" target="_blank">GitHub ↗</a>]</span>
       </div>
       <span class="item-date">Dec 2022</span>
     </div>
@@ -312,48 +322,7 @@
     <div class="tech-stack"><strong>Tech Stack:</strong> HTML, CSS, JavaScript.</div>
   </div>
 
-  <!-- Technical Skills -->
-  <div class="section">
-    <div class="section-heading">Technical Skills</div>
-    <table class="skills-grid">
-      <tr>
-        <td class="skills-label">Programming Languages:</td>
-        <td class="skills-content">Java, Kotlin, Python, Dart, SQL</td>
-      </tr>
-      <tr>
-        <td class="skills-label">Mobile Development:</td>
-        <td class="skills-content">Android (Kotlin, Java), Jetpack Compose, Flutter, XML Layouts, Activity & Fragment Lifecycle</td>
-      </tr>
-      <tr>
-        <td class="skills-label">Frameworks & Architecture:</td>
-        <td class="skills-content">Android SDK, Jetpack Components (ViewModel, LiveData, StateFlow, Navigation), MVVM, Coroutines</td>
-      </tr>
-      <tr>
-        <td class="skills-label">Databases & Cloud:</td>
-        <td class="skills-content">SQL, SQLite, Room DB, Firebase Firestore, Realtime DB, Cloud Messaging (FCM)</td>
-      </tr>
-      <tr>
-        <td class="skills-label">Tools & Platforms:</td>
-        <td class="skills-content">Android Studio, VS Code, Git, GitHub, Linux, Google Play Console, Google Colab</td>
-      </tr>
-      <tr>
-        <td class="skills-label">Soft Skills:</td>
-        <td class="skills-content">Adaptability, Teamwork, Leadership, Critical Thinking, Problem Solving</td>
-      </tr>
-    </table>
-  </div>
-
-  <!-- Achievements -->
-  <div class="section">
-    <div class="section-heading">Achievements</div>
-    <ul>
-      <li><strong>GeeksforGeeks – Institution Rank #500:</strong> Ranked among the top performers by solving algorithmic and data structure challenges.</li>
-      <li><strong>Coding Ninjas Master League:</strong> Qualified through consistent high performance in competitive programming contests.</li>
-      <li><strong>Competitive Programming Consistency:</strong> Solved <strong>200+ problems</strong> across platforms (GFG, LeetCode, Coding Ninjas), improving problem-solving speed and accuracy.</li>
-    </ul>
-  </div>
-
-  <!-- Certifications -->
+  <!-- CERTIFICATES -->
   <div class="section">
     <div class="section-heading">Certificates</div>
     <div class="cert-row">
@@ -370,30 +339,37 @@
     </div>
   </div>
 
-  <!-- Education -->
+  <!-- ACHIEVEMENTS -->
+  <div class="section">
+    <div class="section-heading">Achievements</div>
+    <ul>
+      <li><strong>GeeksforGeeks – Institution Rank #500:</strong> Ranked among the top performers by solving algorithmic and data structure challenges.</li>
+      <li><strong>Coding Ninjas Master League:</strong> Qualified through consistent high performance in competitive programming contests.</li>
+      <li><strong>Competitive Programming Consistency:</strong> Solved <strong>200+ problems</strong> across platforms (GFG, LeetCode, Coding Ninjas), improving problem-solving speed and accuracy.</li>
+    </ul>
+  </div>
+
+  <!-- EDUCATION -->
   <div class="section" style="margin-bottom: 0;">
     <div class="section-heading">Education</div>
     
     <div class="item-row">
       <div>
-        <span class="item-primary">Lovely Professional University (LPU)</span>
-        <span class="item-secondary">, Phagwara, Punjab · Bachelor of Technology - Computer Science and Engineering</span>
+        <span class="item-primary">Lovely Professional University (LPU)</span><span class="item-secondary">, Phagwara, Punjab · Bachelor of Technology - Computer Science and Engineering</span>
       </div>
       <span class="item-date">September 2022 – June 2026</span>
     </div>
     
-    <div class="item-row" style="margin-top: 1.5px;">
+    <div class="item-row" style="margin-top: 1px;">
       <div>
-        <span class="item-primary">S.N.S College</span>
-        <span class="item-secondary">, Motihari, Bihar · Intermediate; Percentage: <strong>67.6%</strong></span>
+        <span class="item-primary">S.N.S College</span><span class="item-secondary">, Motihari, Bihar · Intermediate; Percentage: <strong>67.6%</strong></span>
       </div>
       <span class="item-date">April 2020 – March 2022</span>
     </div>
 
-    <div class="item-row" style="margin-top: 1.5px;">
+    <div class="item-row" style="margin-top: 1px;">
       <div>
-        <span class="item-primary">Jeewan Public School</span>
-        <span class="item-secondary">, Motihari, Bihar · Matriculation; Percentage: <strong>78.6%</strong></span>
+        <span class="item-primary">Jeewan Public School</span><span class="item-secondary">, Motihari, Bihar · Matriculation; Percentage: <strong>78.6%</strong></span>
       </div>
       <span class="item-date">April 2018 – March 2020</span>
     </div>
