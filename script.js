@@ -784,6 +784,37 @@ if (copyPlaystoreBtn) {
 }
 
 // ==========================================
+// 3.5. RESUME PREVIEW MODAL
+// ==========================================
+const resumeModal = document.getElementById('resume-modal');
+const openResumeBtn = document.getElementById('btn-resume-preview');
+const closeResumeBtn = document.getElementById('close-resume-modal');
+
+function openResumeModal() {
+  if (resumeModal) {
+    resumeModal.classList.add('open');
+    resumeModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeResumeModal() {
+  if (resumeModal) {
+    resumeModal.classList.remove('open');
+    resumeModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+}
+
+if (openResumeBtn) openResumeBtn.addEventListener('click', openResumeModal);
+if (closeResumeBtn) closeResumeBtn.addEventListener('click', closeResumeModal);
+if (resumeModal) {
+  resumeModal.addEventListener('click', (e) => {
+    if (e.target === resumeModal) closeResumeModal();
+  });
+}
+
+// ==========================================
 // 4. COMMAND PALETTE (CTRL + K / CMD + K)
 // ==========================================
 const cmdPalette = document.getElementById('cmd-palette');
@@ -793,6 +824,13 @@ const navCmdBtn = document.getElementById('nav-cmd-btn');
 const floatingCmdBtn = document.getElementById('floating-cmd-btn');
 
 const commands = [
+  {
+    icon: '👁️',
+    title: 'Preview Resume / CV',
+    sub: 'Open interactive 1-page ATS resume modal preview',
+    badge: 'Preview',
+    action: () => openResumeModal()
+  },
   {
     icon: '📄',
     title: 'Download Resume',
@@ -1052,6 +1090,14 @@ window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       e.preventDefault();
       closeQrModal();
+    }
+  }
+
+  // When Resume Modal is open
+  if (resumeModal && resumeModal.classList.contains('open')) {
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      closeResumeModal();
     }
   }
 });

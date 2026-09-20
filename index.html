@@ -76,9 +76,13 @@
       </p>
       <div class="hero-buttons" id="hero-buttons">
         <a href="#projects" class="btn btn-primary" id="btn-projects">View My Work 🚀</a>
-        <a href="resume.pdf" download class="btn btn-resume" id="btn-resume">
+        <button type="button" class="btn btn-resume" id="btn-resume-preview" title="Quick View Resume">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          View Resume 👁️
+        </button>
+        <a href="resume.pdf" download class="btn btn-secondary" id="btn-resume" title="Download ATS Resume PDF">
           <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-          Download Resume
+          Download PDF
         </a>
         <a href="#contact" class="btn btn-secondary" id="btn-contact">Get In Touch</a>
       </div>
@@ -1084,6 +1088,32 @@
         <a href="https://play.google.com/store/apps/details?id=com.wildlife.zooexplorer" target="_blank" class="btn btn-secondary">
           Open Store ↗
         </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resume Preview Modal -->
+  <div class="modal-overlay" id="resume-modal" aria-hidden="true">
+    <div class="modal-card resume-modal-card">
+      <button class="modal-close" id="close-resume-modal" aria-label="Close modal">&times;</button>
+      <div class="resume-modal-topbar">
+        <div class="resume-modal-info">
+          <div class="modal-badge">📄 ATS-Compliant 1-Page CV</div>
+          <h3>Gulshan Kumar · Resume</h3>
+          <p>Android (Kotlin &amp; Compose) &bull; Flutter (Dart) &bull; Adyapan Edutech Intern</p>
+        </div>
+        <div class="resume-modal-actions">
+          <a href="resume.pdf" download class="btn btn-primary btn-sm">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            Download PDF
+          </a>
+          <a href="resume.pdf" target="_blank" class="btn btn-secondary btn-sm">
+            Open PDF ↗
+          </a>
+        </div>
+      </div>
+      <div class="resume-modal-body">
+        <img src="resume_preview.png" alt="Gulshan Kumar Official ATS Resume Preview" class="resume-sheet-img" />
       </div>
     </div>
   </div>
