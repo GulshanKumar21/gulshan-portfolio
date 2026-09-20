@@ -1279,6 +1279,26 @@ body {
 .private-badge { background: rgba(156,163,175,0.1); color: #9ca3af; border: 1px solid rgba(156,163,175,0.25); }
 .flutter-badge { background: rgba(84,197,248,0.15); color: var(--flutter); border: 1px solid rgba(84,197,248,0.3); }
 .solo-badge { background: rgba(250,204,21,0.12); color: #fbbf24; border: 1px solid rgba(250,204,21,0.3); }
+.live-badge { background: rgba(34,197,94,0.18); color: #4ade80; border: 1px solid rgba(34,197,94,0.4); font-weight: 700; }
+/* Play Store link button */
+.project-links { margin-top: 1.2rem; display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.project-link-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 16px; border-radius: 10px;
+  font-size: 0.82rem; font-weight: 600;
+  text-decoration: none; transition: var(--transition);
+}
+.playstore-btn {
+  background: linear-gradient(135deg, rgba(34,197,94,0.2), rgba(16,185,129,0.15));
+  color: #4ade80;
+  border: 1px solid rgba(34,197,94,0.4);
+}
+.playstore-btn:hover {
+  background: linear-gradient(135deg, rgba(34,197,94,0.35), rgba(16,185,129,0.25));
+  border-color: rgba(34,197,94,0.7);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(34,197,94,0.2);
+}
 .team-badge { background: rgba(96,165,250,0.12); color: #60a5fa; border: 1px solid rgba(96,165,250,0.25); }
 .student-icon { background: rgba(167,139,250,0.15); color: var(--primary-light); }
 .admin-icon { background: rgba(251,146,60,0.15); color: #fb923c; }
