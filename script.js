@@ -176,9 +176,10 @@ document.head.appendChild(style);
 function animateCounter(el, target, duration = 1500) {
   let start = 0;
   const step = target / (duration / 16);
+  const suffix = el.dataset.suffix !== undefined ? el.dataset.suffix : (target >= 2000 ? '' : '+');
   function update() {
     start = Math.min(start + step, target);
-    el.textContent = Math.floor(start) + (el.dataset.suffix || '+');
+    el.textContent = Math.floor(start) + suffix;
     if (start < target) requestAnimationFrame(update);
   }
   update();
@@ -189,9 +190,7 @@ const counterObs = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       const el = entry.target;
       const val = parseInt(el.textContent);
-      if (isNaN(val)) { counterObs.unobserve(el); return; } // skip text values
-      const suffix = el.textContent.replace(/[0-9]/g, '');
-      el.dataset.suffix = suffix;
+      if (isNaN(val)) { counterObs.unobserve(el); return; }
       animateCounter(el, val);
       counterObs.unobserve(el);
     }
