@@ -1,7 +1,6 @@
 // ===== PARTICLES =====
 function createParticles() {
   const container = document.getElementById('particles');
-  if (!container) return;
   const count = 50;
   for (let i = 0; i < count; i++) {
     const p = document.createElement('div');
@@ -16,7 +15,7 @@ function createParticles() {
       opacity: ${Math.random() * 0.5 + 0.1};
     `;
     // Vary colors
-    const colors = ['#00ff88', '#00d4ff', '#7c3aed', '#f59e0b'];
+    const colors = ['#7c3aed', '#a78bfa', '#06b6d4', '#f59e0b'];
     p.style.background = colors[Math.floor(Math.random() * colors.length)];
     container.appendChild(p);
   }
@@ -26,7 +25,6 @@ createParticles();
 // ===== NAVBAR SCROLL =====
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-  if (!navbar) return;
   if (window.scrollY > 50) {
     navbar.classList.add('scrolled');
   } else {
@@ -37,43 +35,24 @@ window.addEventListener('scroll', () => {
 // ===== HAMBURGER MENU =====
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
-const mobileMenu = document.getElementById('mobile-menu');
-
-if (hamburger) {
-  hamburger.addEventListener('click', () => {
-    if (mobileMenu) mobileMenu.classList.toggle('open');
-    if (navLinks) navLinks.classList.toggle('open');
-    const spans = hamburger.querySelectorAll('span');
-    const isOpen = (mobileMenu && mobileMenu.classList.contains('open')) || (navLinks && navLinks.classList.contains('open'));
-    if (isOpen) {
-      if (spans.length >= 3) {
-        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-        spans[1].style.opacity = '0';
-        spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
-      }
-    } else {
-      spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
-    }
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+  const spans = hamburger.querySelectorAll('span');
+  if (navLinks.classList.contains('open')) {
+    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+    spans[1].style.opacity = '0';
+    spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+  } else {
+    spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+  }
+});
+// Close menu on link click
+navLinks.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
   });
-}
-if (navLinks) {
-  navLinks.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      if (mobileMenu) mobileMenu.classList.remove('open');
-      if (hamburger) hamburger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
-    });
-  });
-}
-if (mobileMenu) {
-  mobileMenu.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      if (navLinks) navLinks.classList.remove('open');
-      if (hamburger) hamburger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
-    });
-  });
-}
+});
 
 // ===== TYPED TEXT ANIMATION =====
 const typedRoles = [
@@ -157,7 +136,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
       navLinkEls.forEach(link => {
         link.style.color = '';
         if (link.getAttribute('href') === `#${entry.target.id}`) {
-          link.style.color = '#00ff88';
+          link.style.color = '#a78bfa';
         }
       });
     }
@@ -373,10 +352,10 @@ function runCommand(cmd) {
 
     case 'projects':
       addLine('Featured App Deliveries:');
-      addLine('  🚀 <span class="cmd-highlight">LeadDialer (CRM)</span> - Solo built, 100% Kotlin production app with offline storage and background call syncing.');
-      addLine('  🚀 <span class="cmd-highlight">One School App</span> - Flutter-based school management system.');
-      addLine('  🚀 <span class="cmd-highlight">LMS App</span> - Flutter learning management system.');
-      addLine('  🟢 <span class="cmd-highlight">ZooVerse</span> - Native Android app live on Google Play Store.');
+      addLine('  🚀 <span class="cmd-highlight">Adyapan LeadDialer (CRM)</span> - Solo built, 100% Kotlin production app with offline storage and background call syncing.');
+      addLine('  🚀 <span class="cmd-highlight">Adyapan Student App</span> - Flutter-based gamified educational app with parental dashboard.');
+      addLine('  🚀 <span class="cmd-highlight">Adyapan Admin App</span> - Flutter school admin suite.');
+      addLine('  🎓 <span class="cmd-highlight">Zoo Explorer App</span> - Native Android guide app with maps.');
       break;
 
     case 'clear':
