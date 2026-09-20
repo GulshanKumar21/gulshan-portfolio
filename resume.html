@@ -6,7 +6,7 @@
   <style>
     @page {
       size: letter;
-      margin: 5.2mm 8.5mm 4.5mm 8.5mm;
+      margin: 8.0mm 11.0mm 8.0mm 11.0mm;
     }
     *, *:before, *:after {
       box-sizing: border-box;
@@ -15,8 +15,8 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color: #0f172a;
       background: #ffffff;
-      line-height: 1.21;
-      font-size: 7.95pt;
+      line-height: 1.22;
+      font-size: 8.1pt;
       margin: 0;
       padding: 0;
       -webkit-font-smoothing: antialiased;
@@ -33,8 +33,7 @@
     /* Header */
     header {
       text-align: center;
-      margin-bottom: 2px;
-      padding-bottom: 1.5px;
+      margin-bottom: 2.5px;
     }
     h1.name {
       font-size: 18.5pt;
@@ -42,17 +41,16 @@
       color: #0f172a;
       letter-spacing: 0.5px;
       line-height: 1.05;
-      margin: 0 0 1.5px 0;
+      margin: 0 0 1px 0;
     }
     h2.role-title {
-      font-size: 9.6pt;
+      font-size: 9.5pt;
       font-weight: 700;
       color: #0284c7;
-      letter-spacing: 0.2px;
-      margin: 0 0 2px 0;
+      margin: 0 0 1.5px 0;
     }
     .contact-line {
-      font-size: 7.9pt;
+      font-size: 8.0pt;
       color: #334155;
       display: flex;
       justify-content: center;
@@ -64,43 +62,41 @@
     .contact-sep {
       color: #94a3b8;
       font-weight: 400;
-      font-size: 7.2pt;
     }
 
     /* Section Headings */
     section {
-      margin-top: 2.2px;
-      margin-bottom: 2.2px;
+      margin-top: 4.2px;
+      margin-bottom: 1.8px;
     }
     h3.section-heading {
-      font-size: 8.5pt;
+      font-size: 8.9pt;
       font-weight: 800;
       color: #0f172a;
       text-transform: uppercase;
       letter-spacing: 0.5px;
       border-bottom: 1.1px solid #0f172a;
-      padding-bottom: 0.5px;
-      margin: 0 0 1.5px 0;
+      padding-bottom: 0.8px;
+      margin: 0 0 2px 0;
     }
 
     /* Professional Summary */
     .summary-text {
-      font-size: 7.8pt;
+      font-size: 8.05pt;
       color: #1e293b;
-      line-height: 1.23;
+      line-height: 1.24;
       text-align: justify;
-      margin: 0.8px 0 1.2px 0;
+      margin: 0;
     }
     
-    /* Skills: Each in one single row */
+    /* Skills */
     .skills-block {
-      margin-top: 0.8px;
-      margin-bottom: 0.8px;
+      margin: 0;
     }
     .skill-row {
-      font-size: 7.75pt;
+      font-size: 8.0pt;
       color: #1e293b;
-      line-height: 1.23;
+      line-height: 1.24;
       margin-bottom: 0.6px;
       white-space: nowrap;
       overflow: hidden;
@@ -116,21 +112,21 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-top: 1px;
-      margin-bottom: 0.2px;
+      margin-top: 1.8px;
+      margin-bottom: 0.3px;
     }
     .item-primary {
-      font-size: 8.3pt;
+      font-size: 8.35pt;
       font-weight: 700;
       color: #0f172a;
     }
     .item-secondary {
-      font-size: 8.0pt;
+      font-size: 8.05pt;
       font-weight: 600;
       color: #334155;
     }
     .item-date {
-      font-size: 7.7pt;
+      font-size: 7.85pt;
       font-weight: 600;
       color: #475569;
       white-space: nowrap;
@@ -146,39 +142,34 @@
       border: 1px solid #6ee7b7;
       padding: 0.5px 3.5px;
       border-radius: 3px;
-      margin-left: 3px;
+      margin-left: 4px;
       vertical-align: middle;
-      letter-spacing: 0.2px;
     }
     
-    /* Native Round Bullets (ATS Compliant, static flow) */
+    /* Native Round Bullets */
     ul {
       list-style-type: disc;
       padding-left: 13px;
-      margin-top: 0.2px;
+      margin-top: 0.8px;
       margin-bottom: 1px;
     }
     li {
       margin-bottom: 0.6px;
       color: #1e293b;
-      font-size: 7.75pt;
+      font-size: 8.0pt;
       text-align: left;
-      line-height: 1.20;
-    }
-    li::marker {
-      color: #0f172a;
-      font-size: 6.8pt;
+      line-height: 1.21;
     }
     li strong {
       color: #0f172a;
       font-weight: 700;
     }
     .tech-stack {
-      font-size: 7.3pt;
+      font-size: 7.45pt;
       color: #475569;
-      margin-top: 0.2px;
       margin-left: 13px;
       margin-bottom: 1px;
+      margin-top: 0.3px;
     }
 
     /* Cert item */
@@ -186,9 +177,15 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 0.5px;
-      font-size: 7.75pt;
+      margin-bottom: 0.6px;
+      font-size: 8.0pt;
       color: #1e293b;
+    }
+
+    /* Education item */
+    .edu-item {
+      margin-top: 1.8px;
+      margin-bottom: 1px;
     }
   </style>
 </head>
@@ -196,20 +193,20 @@
 
   <!-- Header -->
   <header>
-    <h1 class="name">Gulshan Kumar</h1>
+    <h1 class="name">GULSHAN KUMAR</h1>
     <h2 class="role-title">Android (Kotlin, Jetpack Compose) &amp; Flutter Developer</h2>
     <div class="contact-line">
       <span>+91-7654253873</span>
-      <span class="contact-sep">•</span>
+      <span class="contact-sep">|</span>
       <span><a href="mailto:gulshan.12216935@gmail.com">gulshan.12216935@gmail.com</a></span>
-      <span class="contact-sep">•</span>
+      <span class="contact-sep">|</span>
       <span>Sugauli, Bihar, India</span>
     </div>
     <div class="contact-line">
       <span><a href="https://www.linkedin.com/in/gulshan-kumar38" target="_blank">linkedin.com/in/gulshan-kumar38</a></span>
-      <span class="contact-sep">•</span>
+      <span class="contact-sep">|</span>
       <span><a href="https://github.com/Gulshankumar21" target="_blank">github.com/Gulshankumar21</a></span>
-      <span class="contact-sep">•</span>
+      <span class="contact-sep">|</span>
       <span><a href="https://gulshankumar21.github.io/gulshan-portfolio/" target="_blank">Portfolio: gulshankumar21.github.io</a></span>
     </div>
   </header>
@@ -218,7 +215,7 @@
   <section>
     <h3 class="section-heading">Professional Summary</h3>
     <div class="summary-text">
-      Mobile Application Engineer with verified production experience designing offline-first client solutions using Kotlin, Jetpack Compose, and Flutter. Proven record implementing reactive MVVM architectures, publishing applications to the Google Play Store, and sustaining a 99.8% crash-free session stability rate across production user bases.
+      Mobile Application Engineer with verified production experience engineering offline-first client solutions using Kotlin, Jetpack Compose, and Flutter. Proven track record architecting scalable MVVM mobile applications, publishing to Google Play Store, and sustaining 99.8% crash-free session stability across enterprise and consumer user bases.
     </div>
   </section>
 
@@ -229,9 +226,9 @@
       <div class="skill-row">• <strong>Programming Languages:</strong> Kotlin, Java, Dart, Python, SQL, C/C++</div>
       <div class="skill-row">• <strong>Mobile Engineering:</strong> Android SDK, Jetpack Compose, Flutter (Dart), XML Layouts, Activity &amp; Fragment Lifecycle</div>
       <div class="skill-row">• <strong>Architecture &amp; Frameworks:</strong> MVVM, Clean Architecture, Jetpack Components (ViewModel, LiveData, StateFlow), Coroutines</div>
-      <div class="skill-row">• <strong>Databases &amp; Cloud:</strong> SQLite, Room Database, Firebase (Firestore, Cloud Messaging - FCM, Auth, Realtime DB), Storage</div>
-      <div class="skill-row">• <strong>Tools &amp; DevOps:</strong> Android Studio, VS Code, Git, GitHub, Linux, Google Play Console, Postman, Google Colab</div>
-      <div class="skill-row">• <strong>Core Competencies:</strong> Offline-First Caching, REST APIs, Retrofit, Profiling &amp; Optimization, Agile Collaboration</div>
+      <div class="skill-row">• <strong>Databases &amp; Cloud:</strong> SQLite, Room Database, Firebase (Firestore, Cloud Messaging - FCM, Auth, Realtime DB), Cloud Storage</div>
+      <div class="skill-row">• <strong>Developer Tools:</strong> Android Studio, VS Code, Git, GitHub, Linux, Google Play Console, Postman, Google Colab</div>
+      <div class="skill-row">• <strong>Core Competencies:</strong> Offline-First Caching, REST APIs, Retrofit, Performance Profiling, Memory Optimization, Agile Delivery</div>
     </div>
   </section>
 
@@ -243,26 +240,26 @@
     <div class="item-row">
       <div>
         <span class="item-primary">Adyapan Edutech Private Limited</span>
-        <span class="item-secondary">· Android &amp; Flutter Developer (Full-Time)</span>
+        <span class="item-secondary"> - Android &amp; Flutter Developer (Full-Time)</span>
       </div>
-      <span class="item-date">Sep 2026 – Present</span>
+      <span class="item-date">Sep 2026 - Present</span>
     </div>
     <ul>
       <li>Spearhead native Android and Flutter production releases for <strong>2+ client-facing applications</strong>, maintaining <strong>99.8% crash-free sessions</strong> and accelerating bi-weekly sprint delivery by <strong>25%</strong>.</li>
-      <li>Engineer reactive <strong>MVVM architecture</strong> paired with <strong>Room SQLite</strong> caching, decreasing backend server requests by <strong>40%</strong> via automated data synchronization with <strong>Firebase Firestore</strong>.</li>
+      <li>Engineer responsive client architecture paired with <strong>Room SQLite</strong> local caching, decreasing backend server requests by <strong>40%</strong> via automated background synchronization with <strong>Firebase Firestore</strong>.</li>
     </ul>
 
     <!-- Adyapan Edutech - Internship -->
-    <div class="item-row" style="margin-top: 1px;">
+    <div class="item-row" style="margin-top: 1.4px;">
       <div>
         <span class="item-primary">Adyapan Edutech Private Limited</span>
-        <span class="item-secondary">· Android &amp; Flutter Developer Intern</span>
+        <span class="item-secondary"> - Android &amp; Flutter Developer Intern</span>
       </div>
-      <span class="item-date">Mar 2026 – Aug 2026</span>
+      <span class="item-date">Mar 2026 - Aug 2026</span>
     </div>
     <ul>
       <li>Built <strong>Lead Dialer CRM</strong>, an enterprise telephony tool enabling automated outbound calling with offline queuing via <strong>WorkManager</strong>, processing over <strong>1,000 daily interaction logs</strong>.</li>
-      <li>Developed an anti-spoof biometric attendance system pairing <strong>CameraX</strong> facial selfie verification with <strong>FusedLocationProvider</strong> geofencing, eliminating proxy check-ins across a strict <strong>50-meter perimeter</strong>.</li>
+      <li>Developed an anti-spoofing biometric attendance system pairing <strong>CameraX</strong> selfie verification with <strong>FusedLocationProvider</strong> geofencing, eliminating proxy check-ins by <strong>100%</strong> across a strict <strong>50-meter perimeter</strong>.</li>
       <li>Authored cross-platform student dashboards for <strong>One School App</strong> and <strong>LMS</strong> in Flutter, routing role-based navigation and broadcasting targeted notifications via <strong>FCM</strong> to <strong>5,000+ enrolled users</strong>.</li>
     </ul>
   </section>
@@ -276,40 +273,40 @@
       <div>
         <span class="item-primary">Zoo Explorer (ZooVerse)</span>
         <span class="play-badge">LIVE ON GOOGLE PLAY</span>
-        <span style="font-size: 7.5pt; margin-left: 3px;">
-          [<a href="https://play.google.com/store/apps/details?id=com.wildlife.zooexplorer" target="_blank">Google Play</a>] 
+        <span style="font-size: 7.6pt; margin-left: 4px;">
+          [<a href="https://play.google.com/store/apps/details?id=com.wildlife.zooexplorer" target="_blank">Play Store</a>] 
           [<a href="https://github.com/GulshanKumar21" target="_blank">GitHub</a>]
         </span>
       </div>
       <span class="item-date">Apr 2025</span>
     </div>
     <ul>
-      <li>Published interactive zoo companion app on <strong>Google Play Store</strong> (<code>com.wildlife.zooexplorer</code>), integrating <strong>Google Maps SDK</strong> with custom route-finding across <strong>20+ animal enclosures</strong> for <strong>1,000+ visitors</strong>.</li>
-      <li>Optimized UI rendering pipeline with <strong>100% declarative Jetpack Compose</strong> and reactive <strong>Room Database</strong> caching, slashing initial screen render latency by <strong>90%</strong>.</li>
-      <li>Formulated visitor feedback mechanism to iterate on usability, elevating public Google Play Store review rating from 3.6 to <strong>4.8/5.0 stars (+1.2 boost)</strong>.</li>
+      <li>Published interactive zoo companion application on <strong>Google Play Store</strong>, integrating <strong>Google Maps SDK</strong> with custom route navigation across <strong>20+ animal enclosures</strong> for <strong>1,000+ active visitors</strong>.</li>
+      <li>Optimized UI rendering pipeline utilizing <strong>100% declarative Jetpack Compose</strong> and reactive <strong>Room Database</strong> caching, slashing initial screen render latency by <strong>90%</strong>.</li>
+      <li>Formulated in-app feedback mechanism to iteratively refine usability, elevating public Google Play Store review rating from 3.6 to <strong>4.8 / 5.0 stars (+1.2 boost)</strong>.</li>
     </ul>
     <div class="tech-stack"><strong>Tech Stack:</strong> Kotlin, Jetpack Compose, Room DB, Google Maps SDK, Firebase Firestore, Android SDK, Git.</div>
 
     <!-- Tic Tac Toe -->
-    <div class="item-row">
+    <div class="item-row" style="margin-top: 1.4px;">
       <div>
-        <span class="item-primary">Tic Tac Toe – Android Game with Computer AI</span>
-        <span style="font-size: 7.5pt; margin-left: 3px;">[<a href="https://github.com/GulshanKumar21" target="_blank">GitHub</a>]</span>
+        <span class="item-primary">Tic Tac Toe - Native Android Game with AI</span>
+        <span style="font-size: 7.6pt; margin-left: 4px;">[<a href="https://github.com/GulshanKumar21" target="_blank">GitHub</a>]</span>
       </div>
       <span class="item-date">Nov 2024</span>
     </div>
     <ul>
-      <li>Created native Android strategy game featuring dual gameplay modes (Human vs AI &amp; Local Two-Player), logging <strong>500+ completed matches</strong> with zero ANR (Application Not Responding) events.</li>
-      <li>Programmed a zero-latency heuristic decision engine calculating optimal counter-moves within <strong>sub-10 milliseconds</strong> using minimax game tree evaluation.</li>
-      <li>Constructed unified state machine preserving board states, win/draw validations, and score counters across <strong>100% of configuration changes and lifecycle events</strong>.</li>
+      <li>Created native Android strategy game featuring dual gameplay modes (Human vs AI and Local Two-Player), logging <strong>500+ completed matches</strong> with <strong>0% ANR</strong> (Application Not Responding) rate.</li>
+      <li>Programmed a zero-latency heuristic decision engine calculating optimal counter-moves in <strong>under 10 milliseconds</strong> using Minimax game tree evaluation.</li>
+      <li>Constructed unified state machine preserving board states, win and draw validations, and score counters across <strong>100% of configuration changes and lifecycle events</strong>.</li>
     </ul>
     <div class="tech-stack"><strong>Tech Stack:</strong> Kotlin, Android SDK, Custom Canvas/XML, Minimax AI Logic, OOP, Git.</div>
 
     <!-- Learning Management System -->
-    <div class="item-row">
+    <div class="item-row" style="margin-top: 1.4px;">
       <div>
         <span class="item-primary">Learning Management System (LMS)</span>
-        <span style="font-size: 7.5pt; margin-left: 3px;">[<a href="https://github.com/GulshanKumar21" target="_blank">GitHub</a>]</span>
+        <span style="font-size: 7.6pt; margin-left: 4px;">[<a href="https://github.com/GulshanKumar21" target="_blank">GitHub</a>]</span>
       </div>
       <span class="item-date">Dec 2022</span>
     </div>
@@ -318,22 +315,22 @@
       <li>Integrated interactive video lecture player, automated quiz evaluation, and community query forums serving <strong>200+ enrolled students</strong>.</li>
       <li>Coordinated four developers as team lead to architect modular frontend components, driving a <strong>65% increase in weekly student study engagement</strong>.</li>
     </ul>
-    <div class="tech-stack"><strong>Tech Stack:</strong> JavaScript (ES6+), HTML5, CSS3, REST Integration, Modular Web Design, Git.</div>
+    <div class="tech-stack"><strong>Tech Stack:</strong> JavaScript (ES6+), HTML5, CSS3, REST API Integration, Modular Web Architecture, Git.</div>
   </section>
 
   <!-- CERTIFICATIONS -->
   <section>
     <h3 class="section-heading">Certifications</h3>
     <div class="cert-row">
-      <span class="item-secondary">• <strong>Introduction to Android Mobile Application Development</strong> – Meta, Coursera</span>
+      <span>• <strong>Introduction to Android Mobile Application Development</strong> - Meta, Coursera</span>
       <span class="item-date">Oct 2024</span>
     </div>
     <div class="cert-row">
-      <span class="item-secondary">• <strong>Programming Fundamentals in Kotlin</strong> – Meta, Coursera</span>
+      <span>• <strong>Programming Fundamentals in Kotlin</strong> - Meta, Coursera</span>
       <span class="item-date">Nov 2024</span>
     </div>
     <div class="cert-row">
-      <span class="item-secondary">• <strong>Cloud Computing</strong> – NPTEL (IIT Kharagpur)</span>
+      <span>• <strong>Cloud Computing</strong> - NPTEL (IIT Kharagpur)</span>
       <span class="item-date">Dec 2024</span>
     </div>
   </section>
@@ -342,35 +339,46 @@
   <section>
     <h3 class="section-heading">Achievements</h3>
     <ul>
-      <li><strong>GeeksforGeeks – Institutional Rank 500:</strong> Solved complex Data Structures and Algorithms problems to rank among top university performers.</li>
-      <li><strong>Coding Ninjas Master League:</strong> Earned division qualification via consistent contest problem-solving accuracy and speed.</li>
-      <li><strong>Competitive Programming Consistency:</strong> Solved <strong>200+ algorithmic challenges</strong> across LeetCode, GFG, and Coding Ninjas with optimal asymptotic complexity.</li>
+      <li><strong>GeeksforGeeks - Institutional Rank 500:</strong> Ranked among top university coders out of <strong>5,000+ peers</strong> by solving complex Data Structures and Algorithms problems.</li>
+      <li><strong>Coding Ninjas Master League:</strong> Secured Division Master standing with <strong>92% accuracy</strong> across weekly competitive algorithm challenges.</li>
+      <li><strong>Competitive Programming Consistency:</strong> Solved <strong>200+ algorithmic problems</strong> across LeetCode, GFG, and Coding Ninjas with optimal time and memory efficiency.</li>
     </ul>
   </section>
 
-  <!-- EDUCATION (100% PRESERVED) -->
+  <!-- EDUCATION (100% PRESERVED - ALL 3 LEVELS) -->
   <section style="margin-bottom: 0;">
     <h3 class="section-heading">Education</h3>
     
-    <div class="item-row">
-      <div>
-        <span class="item-primary">Lovely Professional University (LPU)</span><span class="item-secondary">, Phagwara, Punjab · Bachelor of Technology in Computer Science and Engineering</span>
+    <div class="edu-item">
+      <div class="item-row">
+        <div>
+          <span class="item-primary">Bachelor of Technology (B.Tech) in Computer Science and Engineering</span>
+        </div>
+        <span class="item-date">Sep 2022 - Jun 2026</span>
       </div>
-      <span class="item-date">September 2022 – June 2026</span>
+      <div style="font-size: 7.95pt; color: #334155; margin-top: 0.3px;">Lovely Professional University (LPU), Phagwara, Punjab</div>
     </div>
     
-    <div class="item-row" style="margin-top: 1px;">
-      <div>
-        <span class="item-primary">S.N.S College</span><span class="item-secondary">, Motihari, Bihar · Intermediate (Science) · Aggregate: <strong>67.6%</strong></span>
+    <div class="edu-item">
+      <div class="item-row">
+        <div>
+          <span class="item-primary">Intermediate (Class XII, Science)</span>
+          <span class="item-secondary"> - Aggregate: <strong>67.6%</strong></span>
+        </div>
+        <span class="item-date">Apr 2020 - Mar 2022</span>
       </div>
-      <span class="item-date">April 2020 – March 2022</span>
+      <div style="font-size: 7.95pt; color: #334155; margin-top: 0.3px;">S.N.S. College, Motihari, Bihar</div>
     </div>
 
-    <div class="item-row" style="margin-top: 1px;">
-      <div>
-        <span class="item-primary">Jeewan Public School</span><span class="item-secondary">, Motihari, Bihar · Matriculation (Class X) · Aggregate: <strong>78.6%</strong></span>
+    <div class="edu-item">
+      <div class="item-row">
+        <div>
+          <span class="item-primary">Matriculation (Class X)</span>
+          <span class="item-secondary"> - Aggregate: <strong>78.6%</strong></span>
+        </div>
+        <span class="item-date">Apr 2018 - Mar 2020</span>
       </div>
-      <span class="item-date">April 2018 – March 2020</span>
+      <div style="font-size: 7.95pt; color: #334155; margin-top: 0.3px;">Jeewan Public School, Motihari, Bihar</div>
     </div>
   </section>
 
