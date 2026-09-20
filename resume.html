@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gulshan Kumar - Resume</title>
+  <style>
+    @page {
+      size: letter;
+      margin: 8mm 11mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1e293b;
+      background: #ffffff;
+      line-height: 1.30;
+      font-size: 8.9pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    a {
+      color: #0369a1;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 6px;
+      padding-bottom: 4px;
+      border-bottom: 1.5px solid #0f172a;
+    }
+    .header h1 {
+      font-size: 19pt;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+      text-transform: uppercase;
+    }
+    .header-sub {
+      font-size: 8.8pt;
+      font-weight: 600;
+      color: #2563eb;
+      margin-bottom: 3px;
+    }
+    .contact-line {
+      font-size: 8.3pt;
+      color: #334155;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+    }
+    
+    /* Section */
+    .section {
+      margin-bottom: 5px;
+    }
+    .section-title {
+      font-size: 9.3pt;
+      font-weight: 800;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid #94a3b8;
+      padding-bottom: 1px;
+      margin-bottom: 3px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    
+    /* Item Rows */
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+    }
+    .item-title {
+      font-size: 9.0pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .item-subtitle {
+      font-size: 8.5pt;
+      font-weight: 600;
+      color: #334155;
+    }
+    .item-date {
+      font-size: 8.2pt;
+      font-weight: 600;
+      color: #475569;
+      white-space: nowrap;
+    }
+    .badge-live {
+      display: inline-block;
+      font-size: 7.2pt;
+      font-weight: 700;
+      color: #047857;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      padding: 0.5px 4px;
+      border-radius: 4px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+
+    /* Bullet lists */
+    ul {
+      list-style-type: disc;
+      padding-left: 13px;
+      margin-top: 1px;
+      margin-bottom: 2px;
+    }
+    li {
+      margin-bottom: 1.5px;
+      color: #334155;
+      font-size: 8.5pt;
+      text-align: justify;
+    }
+    li strong {
+      color: #0f172a;
+    }
+    
+    /* Skills Grid */
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8.5pt;
+    }
+    .skills-table td {
+      padding: 1px 0;
+      vertical-align: top;
+    }
+    .skills-table .skill-cat {
+      font-weight: 700;
+      color: #0f172a;
+      width: 140px;
+    }
+    .skills-table .skill-val {
+      color: #334155;
+    }
+    
+    .tech-stack-line {
+      font-size: 8.0pt;
+      color: #475569;
+      margin-top: 1px;
+      margin-left: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Gulshan Kumar</h1>
+    <div class="header-sub">Mobile Application Engineer · Android (Kotlin, Jetpack Compose) & Flutter (Dart)</div>
+    <div class="contact-line">
+      <span class="contact-item">📞 +91-7654253873</span>
+      <span class="contact-item">✉️ <a href="mailto:gulshan.12216935@gmail.com">gulshan.12216935@gmail.com</a></span>
+      <span class="contact-item">💼 <a href="https://www.linkedin.com/in/gulshan-kumar38" target="_blank">linkedin.com/in/gulshan-kumar38</a></span>
+      <span class="contact-item">🐙 <a href="https://github.com/Gulshankumar21" target="_blank">github.com/Gulshankumar21</a></span>
+      <span class="contact-item">🌐 <a href="https://gulshankumar21.github.io/gulshan-portfolio/" target="_blank">Portfolio</a></span>
+    </div>
+  </div>
+
+  <!-- Work Experience / Internship -->
+  <div class="section">
+    <div class="section-title">Professional Experience & Internship</div>
+    
+    <div class="item-header">
+      <span class="item-title">Adyapan Edutech Private Limited <span style="font-weight:500; color:#475569;">· Android & Flutter Developer Intern</span></span>
+      <span class="item-date">Mar 2026 – Present</span>
+    </div>
+    <ul>
+      <li>Architected and shipped <strong>3+ production-grade mobile applications</strong> using <strong>Kotlin (Jetpack Compose)</strong> and <strong>Flutter (Dart)</strong>, deployed and actively utilized daily by enterprise team members and students.</li>
+      <li>Developed <strong>LeadDialer CRM</strong>, an enterprise Android application featuring 1-tap automated telephony (<code>ACTION_CALL</code> intent), real-time call disposition logging, and offline-first Room SQLite DB synchronization with Firebase Firestore via <strong>WorkManager</strong>.</li>
+      <li>Engineered <strong>anti-spoof biometric attendance</strong> combining <strong>CameraX</strong> selfie verification and <strong>Google FusedLocationProvider</strong> with a strict 50m geofence radius, completely preventing proxy check-ins.</li>
+      <li>Constructed cross-platform frontends for <strong>One School App</strong> & <strong>LMS</strong> with role-based dashboards (Students, Teachers, Admins), video lecture delivery, and push notifications via <strong>Firebase Cloud Messaging (FCM)</strong>.</li>
+    </ul>
+  </div>
+
+  <!-- Projects -->
+  <div class="section">
+    <div class="section-title">Featured Projects</div>
+    
+    <!-- ZooVerse -->
+    <div class="item-header">
+      <div>
+        <span class="item-title">ZooVerse (Zoo Explorer) – Smart Zoo Guide App</span>
+        <span class="badge-live">🟢 LIVE ON GOOGLE PLAY</span>
+        <span style="font-size: 8.0pt; margin-left: 6px;">
+          [<a href="https://play.google.com/store/apps/details?id=com.wildlife.zooexplorer" target="_blank">Google Play</a>] 
+          [<a href="https://github.com/Gulshankumar21" target="_blank">GitHub</a>]
+        </span>
+      </div>
+      <span class="item-date">Jan 2025 – Apr 2025</span>
+    </div>
+    <ul>
+      <li><strong>Published on Google Play Store</strong> (<code>com.wildlife.zooexplorer</code>); interactive Android guide transforming zoo visits with real-time GPS navigation, custom Google Maps SDK markers, and offline animal encyclopedia.</li>
+      <li>Optimized app performance by <strong>reducing load times by 90%</strong> and ensuring smooth responsiveness across Android versions using <strong>Room DB reactive caching</strong> and Jetpack Compose.</li>
+      <li>Spearheaded a real-time visitor feedback loop and dynamic event schedules via Firebase, directly improving user navigation experience and boosting app store rating by <strong>1.2 stars</strong>.</li>
+    </ul>
+    <div class="tech-stack-line"><strong>Tech Stack:</strong> Kotlin, Jetpack Compose, Room SQLite DB, Google Maps SDK, Firebase, MVVM, Coroutines.</div>
+
+    <!-- LeadDialer -->
+    <div class="item-header" style="margin-top: 3px;">
+      <div>
+        <span class="item-title">LeadDialer – Enterprise Android CRM & Attendance</span>
+        <span style="font-size: 8.0pt; margin-left: 6px;">[<a href="https://github.com/Gulshankumar21" target="_blank">GitHub</a>]</span>
+      </div>
+      <span class="item-date">Mar 2026 – Apr 2026</span>
+    </div>
+    <ul>
+      <li>Built an enterprise outbound sales workflow tool with rapid 1-tap dialer execution, scheduled follow-up alerts, and offline SQLite buffering for network-constrained fieldwork.</li>
+      <li>Integrated CameraX biometric facial selfie capture and FusedLocationProvider geolocation with Room local DB & Firebase.</li>
+    </ul>
+    <div class="tech-stack-line"><strong>Tech Stack:</strong> Kotlin, Jetpack Compose, MVVM, Room DB, WorkManager, Firebase Firestore, CameraX.</div>
+
+    <!-- LMS -->
+    <div class="item-header" style="margin-top: 3px;">
+      <div>
+        <span class="item-title">LMS & Learning Management System</span>
+        <span style="font-size: 8.0pt; margin-left: 6px;">[<a href="https://github.com/Gulshankumar21" target="_blank">GitHub</a>]</span>
+      </div>
+      <span class="item-date">Jul 2026 – Aug 2026</span>
+    </div>
+    <ul>
+      <li>Built comprehensive mobile and web LMS platform with course catalog, progress tracking, video lectures, and quizzes.</li>
+      <li>Led a 4-member team, boosting student retention and active engagement by <strong>65%</strong> through interactive gamified modules.</li>
+    </ul>
+    <div class="tech-stack-line"><strong>Tech Stack:</strong> Flutter, Dart, Firebase, REST APIs, HTML/CSS/JavaScript.</div>
+  </div>
+
+  <!-- Technical Skills -->
+  <div class="section">
+    <div class="section-title">Technical Skills</div>
+    <table class="skills-table">
+      <tr>
+        <td class="skill-cat">Programming Languages:</td>
+        <td class="skill-val">Kotlin, Java, Dart, Python, SQL, C/C++</td>
+      </tr>
+      <tr>
+        <td class="skill-cat">Mobile Development:</td>
+        <td class="skill-val">Android SDK, Jetpack Compose, Flutter, XML Layouts, Material 3, Lifecycle Management</td>
+      </tr>
+      <tr>
+        <td class="skill-cat">Architecture & Frameworks:</td>
+        <td class="skill-val">MVVM, Clean Architecture, StateFlow, LiveData, Kotlin Coroutines, Room DB, WorkManager, Hilt</td>
+      </tr>
+      <tr>
+        <td class="skill-cat">Databases & Cloud:</td>
+        <td class="skill-val">Firebase (Auth, Firestore, FCM Push, Storage, App Check), SQLite, Room DB, MySQL</td>
+      </tr>
+      <tr>
+        <td class="skill-cat">Tools & Platforms:</td>
+        <td class="skill-val">Android Studio, VS Code, Git, GitHub, Linux, Google Play Console, Postman, Google Colab</td>
+      </tr>
+      <tr>
+        <td class="skill-cat">Soft Skills:</td>
+        <td class="skill-val">Problem Solving, Team Leadership, Adaptability, Agile Collaboration, Critical Thinking</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Achievements -->
+  <div class="section">
+    <div class="section-title">Achievements & Competitive Programming</div>
+    <ul>
+      <li><strong>GeeksforGeeks – Institution Rank #500:</strong> Ranked among top performers by solving complex algorithmic and data structure problems.</li>
+      <li><strong>Coding Ninjas Master League:</strong> Qualified through consistent high performance in competitive programming contests.</li>
+      <li><strong>Competitive Programming Consistency:</strong> Solved <strong>200+ problems</strong> across GFG, LeetCode, and Coding Ninjas, mastering algorithms and data structures.</li>
+    </ul>
+  </div>
+
+  <!-- Certifications -->
+  <div class="section">
+    <div class="section-title">Certifications</div>
+    <div class="item-header">
+      <span class="item-subtitle">• <strong>Introduction to Android Mobile Application Development</strong> – Meta (Coursera)</span>
+      <span class="item-date">Oct 2024</span>
+    </div>
+    <div class="item-header">
+      <span class="item-subtitle">• <strong>Programming Fundamentals in Kotlin</strong> – Meta (Coursera)</span>
+      <span class="item-date">Nov 2024</span>
+    </div>
+    <div class="item-header">
+      <span class="item-subtitle">• <strong>Cloud Computing</strong> – NPTEL</span>
+      <span class="item-date">Dec 2024</span>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <div class="section" style="margin-bottom: 0;">
+    <div class="section-title">Education</div>
+    
+    <div class="item-header">
+      <div>
+        <span class="item-title">Lovely Professional University (LPU)</span>
+        <span class="item-subtitle">· B.Tech in Computer Science & Engineering</span>
+      </div>
+      <span class="item-date">Sep 2022 – Present (Graduating 2026)</span>
+    </div>
+    
+    <div class="item-header" style="margin-top: 1.5px;">
+      <div>
+        <span class="item-title">S.N.S College</span>
+        <span class="item-subtitle">· Intermediate (Class XII) — <strong>67.6%</strong></span>
+      </div>
+      <span class="item-date">Apr 2020 – Mar 2022</span>
+    </div>
+
+    <div class="item-header" style="margin-top: 1.5px;">
+      <div>
+        <span class="item-title">Jeewan Public School</span>
+        <span class="item-subtitle">· Matriculation (Class X) — <strong>78.6%</strong></span>
+      </div>
+      <span class="item-date">Apr 2018 – Mar 2020</span>
+    </div>
+  </div>
+
+</body>
+</html>
