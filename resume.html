@@ -6,7 +6,7 @@
   <style>
     @page {
       size: letter;
-      margin: 8.0mm 11.0mm 8.0mm 11.0mm;
+      margin: 12.0mm 12.7mm 11.0mm 12.7mm; /* Standard 0.5-inch ATS margins */
     }
     *, *:before, *:after {
       box-sizing: border-box;
@@ -15,8 +15,8 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color: #0f172a;
       background: #ffffff;
-      line-height: 1.22;
-      font-size: 8.1pt;
+      line-height: 1.20;
+      font-size: 7.95pt;
       margin: 0;
       padding: 0;
       -webkit-font-smoothing: antialiased;
@@ -31,26 +31,26 @@
     }
 
     /* Header */
-    header {
+    .header {
       text-align: center;
-      margin-bottom: 2.5px;
+      margin-bottom: 2px;
     }
     h1.name {
-      font-size: 19pt;
+      font-size: 18.5pt;
       font-weight: 800;
       color: #0f172a;
       letter-spacing: 0.3px;
       line-height: 1.05;
       margin: 0 0 1px 0;
     }
-    h2.role-title {
-      font-size: 9.5pt;
+    .role-title {
+      font-size: 9.3pt;
       font-weight: 700;
       color: #0284c7;
       margin: 0 0 1.5px 0;
     }
     .contact-line {
-      font-size: 8.0pt;
+      font-size: 7.9pt;
       color: #334155;
       display: flex;
       justify-content: center;
@@ -67,24 +67,24 @@
     /* Section Headings */
     section {
       margin-top: 4.0px;
-      margin-bottom: 1.8px;
+      margin-bottom: 1.5px;
     }
-    h3.section-heading {
-      font-size: 8.9pt;
+    h2.section-heading {
+      font-size: 8.8pt;
       font-weight: 800;
       color: #0f172a;
       text-transform: uppercase;
       letter-spacing: 0.5px;
       border-bottom: 1.1px solid #0f172a;
-      padding-bottom: 0.8px;
-      margin: 0 0 2px 0;
+      padding-bottom: 0.6px;
+      margin: 0 0 1.8px 0;
     }
 
     /* Professional Summary */
     .summary-text {
-      font-size: 8.05pt;
+      font-size: 7.95pt;
       color: #1e293b;
-      line-height: 1.24;
+      line-height: 1.22;
       text-align: justify;
       margin: 0;
     }
@@ -94,10 +94,10 @@
       margin: 0;
     }
     .skill-row {
-      font-size: 8.0pt;
+      font-size: 7.9pt;
       color: #1e293b;
-      line-height: 1.24;
-      margin-bottom: 0.6px;
+      line-height: 1.22;
+      margin-bottom: 0.5px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -112,53 +112,39 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-top: 1.8px;
-      margin-bottom: 0.3px;
+      margin-top: 1.5px;
+      margin-bottom: 0.2px;
     }
     .item-primary {
-      font-size: 8.35pt;
+      font-size: 8.3pt;
       font-weight: 700;
       color: #0f172a;
     }
     .item-secondary {
-      font-size: 8.05pt;
+      font-size: 8.0pt;
       font-weight: 600;
       color: #334155;
     }
     .item-date {
-      font-size: 7.85pt;
+      font-size: 7.8pt;
       font-weight: 600;
       color: #475569;
       white-space: nowrap;
-    }
-    
-    /* Live Badge */
-    .play-badge {
-      display: inline-block;
-      font-size: 6.4pt;
-      font-weight: 700;
-      color: #047857;
-      background: #ecfdf5;
-      border: 1px solid #6ee7b7;
-      padding: 0.5px 3.5px;
-      border-radius: 3px;
-      margin-left: 4px;
-      vertical-align: middle;
     }
     
     /* Native Round Bullets */
     ul {
       list-style-type: disc;
       padding-left: 13px;
-      margin-top: 0.8px;
-      margin-bottom: 1px;
+      margin-top: 0.6px;
+      margin-bottom: 0.8px;
     }
     li {
-      margin-bottom: 0.6px;
+      margin-bottom: 0.45px;
       color: #1e293b;
-      font-size: 8.0pt;
+      font-size: 7.9pt;
       text-align: left;
-      line-height: 1.21;
+      line-height: 1.19;
     }
     li strong {
       color: #0f172a;
@@ -167,11 +153,11 @@
     
     /* Project Tools Subtitle (Placed before <ul> so ATS parses as metadata, not unquantified bullet) */
     .project-tools {
-      font-size: 7.45pt;
+      font-size: 7.35pt;
       color: #475569;
-      margin-top: 0.5px;
-      margin-bottom: 1.5px;
-      line-height: 1.2;
+      margin-top: 0.4px;
+      margin-bottom: 1.2px;
+      line-height: 1.18;
     }
 
     /* Cert item */
@@ -179,24 +165,24 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 0.6px;
-      font-size: 8.0pt;
+      margin-bottom: 0.5px;
+      font-size: 7.9pt;
       color: #1e293b;
     }
 
     /* Education item */
     .edu-item {
-      margin-top: 1.8px;
-      margin-bottom: 1px;
+      margin-top: 1.5px;
+      margin-bottom: 0.8px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
+  <!-- Header (Semantic div avoids page-header collision) -->
+  <div class="header">
     <h1 class="name">Gulshan Kumar</h1>
-    <h2 class="role-title">Android (Kotlin, Jetpack Compose) &amp; Flutter Developer</h2>
+    <div class="role-title">Android (Kotlin, Jetpack Compose) &amp; Flutter Developer</div>
     <div class="contact-line">
       <span>+91-7654253873</span>
       <span class="contact-sep">|</span>
@@ -211,11 +197,11 @@
       <span class="contact-sep">|</span>
       <span><a href="https://gulshankumar21.github.io/gulshan-portfolio/" target="_blank">Portfolio: gulshankumar21.github.io</a></span>
     </div>
-  </header>
+  </div>
 
   <!-- PROFESSIONAL SUMMARY -->
   <section>
-    <h3 class="section-heading">Professional Summary</h3>
+    <h2 class="section-heading">Professional Summary</h2>
     <div class="summary-text">
       Mobile Application Engineer with verified production experience designing offline-first Android and Flutter solutions using Kotlin and Jetpack Compose. Proven track record deploying client applications, sustaining <strong>99.8% crash-free stability</strong>, and cutting backend server load by <strong>40%</strong> through reactive local caching architectures.
     </div>
@@ -223,7 +209,7 @@
 
   <!-- TECHNICAL SKILLS (Top Position - Single Row Per Category) -->
   <section>
-    <h3 class="section-heading">Technical Skills</h3>
+    <h2 class="section-heading">Technical Skills</h2>
     <div class="skills-block">
       <div class="skill-row">• <strong>Programming Languages:</strong> Kotlin, Java, Dart, Python, SQL, C/C++</div>
       <div class="skill-row">• <strong>Mobile Engineering:</strong> Android SDK, Jetpack Compose, Flutter (Dart), XML Layouts, Activity &amp; Fragment Lifecycle</div>
@@ -236,7 +222,7 @@
 
   <!-- PROFESSIONAL EXPERIENCE -->
   <section>
-    <h3 class="section-heading">Professional Experience</h3>
+    <h2 class="section-heading">Professional Experience</h2>
     
     <!-- Adyapan Edutech - Full Time -->
     <div class="item-row">
@@ -252,7 +238,7 @@
     </ul>
 
     <!-- Adyapan Edutech - Internship -->
-    <div class="item-row" style="margin-top: 1.4px;">
+    <div class="item-row" style="margin-top: 1.2px;">
       <div>
         <span class="item-primary">Adyapan Edutech Private Limited</span>
         <span class="item-secondary"> - Android &amp; Flutter Developer Intern</span>
@@ -268,14 +254,14 @@
 
   <!-- PROJECTS -->
   <section>
-    <h3 class="section-heading">Projects</h3>
+    <h2 class="section-heading">Projects</h2>
     
-    <!-- Zoo Explorer (ZooVerse) -->
+    <!-- Zoo Explorer -->
     <div class="item-row">
       <div>
         <span class="item-primary">Zoo Explorer</span>
-        <span class="play-badge">LIVE ON GOOGLE PLAY</span>
-        <span style="font-size: 7.6pt; margin-left: 4px;">
+        <span style="font-size: 7.4pt; color: #047857; font-weight: 700; margin-left: 3px;">[Live on Google Play]</span>
+        <span style="font-size: 7.4pt; margin-left: 3px;">
           [<a href="https://play.google.com/store/apps/details?id=com.wildlife.zooexplorer" target="_blank">Play Store</a>] 
           [<a href="https://github.com/GulshanKumar21" target="_blank">GitHub</a>]
         </span>
@@ -290,10 +276,10 @@
     </ul>
 
     <!-- Tic Tac Toe -->
-    <div class="item-row" style="margin-top: 1.4px;">
+    <div class="item-row" style="margin-top: 1.2px;">
       <div>
         <span class="item-primary">Tic Tac Toe - Android Game with Computer AI</span>
-        <span style="font-size: 7.6pt; margin-left: 4px;">[<a href="https://github.com/GulshanKumar21" target="_blank">GitHub</a>]</span>
+        <span style="font-size: 7.4pt; margin-left: 3px;">[<a href="https://github.com/GulshanKumar21" target="_blank">GitHub</a>]</span>
       </div>
       <span class="item-date">Nov 2024</span>
     </div>
@@ -305,10 +291,10 @@
     </ul>
 
     <!-- Learning Management System -->
-    <div class="item-row" style="margin-top: 1.4px;">
+    <div class="item-row" style="margin-top: 1.2px;">
       <div>
         <span class="item-primary">Learning Management System (LMS)</span>
-        <span style="font-size: 7.6pt; margin-left: 4px;">[<a href="https://github.com/GulshanKumar21" target="_blank">GitHub</a>]</span>
+        <span style="font-size: 7.4pt; margin-left: 3px;">[<a href="https://github.com/GulshanKumar21" target="_blank">GitHub</a>]</span>
       </div>
       <span class="item-date">Dec 2022</span>
     </div>
@@ -316,13 +302,13 @@
     <ul>
       <li>Designed web education portal supporting <strong>15+ structured academic courses</strong> with student analytics and tiered permission access, trimming administrative overhead by <strong>40%</strong>.</li>
       <li>Integrated interactive video lecture player, instant test grading, and community discussion boards serving <strong>200+ learners</strong> with a <strong>95% course completion ratio</strong>.</li>
-      <li>Directed a team of <strong>4 developers</strong> to construct modular frontend views, driving a <strong>65% surge in weekly student learning engagement</strong>.</li>
+      <li>Directed a team of <strong>4 developers</strong> to construct modular frontend views, driving a 65% surge in weekly student learning engagement.</li>
     </ul>
   </section>
 
   <!-- CERTIFICATIONS -->
   <section>
-    <h3 class="section-heading">Certifications</h3>
+    <h2 class="section-heading">Certifications</h2>
     <div class="cert-row">
       <span>• <strong>Introduction to Android Mobile Application Development</strong> - Meta, Coursera</span>
       <span class="item-date">Oct 2024</span>
@@ -339,7 +325,7 @@
 
   <!-- ACHIEVEMENTS -->
   <section>
-    <h3 class="section-heading">Achievements</h3>
+    <h2 class="section-heading">Achievements</h2>
     <ul>
       <li><strong>GeeksforGeeks - Institutional Rank 500:</strong> Ranked among top university coders out of <strong>5,000+ peers</strong> by solving complex Data Structures and Algorithms problems.</li>
       <li><strong>Coding Ninjas Master League:</strong> Secured Division Master standing with <strong>92% accuracy</strong> across regular algorithm contest challenges.</li>
@@ -349,7 +335,7 @@
 
   <!-- EDUCATION (100% PRESERVED - ALL 3 LEVELS) -->
   <section style="margin-bottom: 0;">
-    <h3 class="section-heading">Education</h3>
+    <h2 class="section-heading">Education</h2>
     
     <div class="edu-item">
       <div class="item-row">
@@ -358,7 +344,7 @@
         </div>
         <span class="item-date">Sep 2022 - Jun 2026</span>
       </div>
-      <div style="font-size: 7.95pt; color: #334155; margin-top: 0.3px;">Lovely Professional University (LPU), Phagwara, Punjab</div>
+      <div style="font-size: 7.9pt; color: #334155; margin-top: 0.2px;">Lovely Professional University (LPU), Phagwara, Punjab</div>
     </div>
     
     <div class="edu-item">
@@ -369,7 +355,7 @@
         </div>
         <span class="item-date">Apr 2020 - Mar 2022</span>
       </div>
-      <div style="font-size: 7.95pt; color: #334155; margin-top: 0.3px;">S.N.S. College, Motihari, Bihar</div>
+      <div style="font-size: 7.9pt; color: #334155; margin-top: 0.2px;">S.N.S. College, Motihari, Bihar</div>
     </div>
 
     <div class="edu-item">
@@ -380,7 +366,7 @@
         </div>
         <span class="item-date">Apr 2018 - Mar 2020</span>
       </div>
-      <div style="font-size: 7.95pt; color: #334155; margin-top: 0.3px;">Jeewan Public School, Motihari, Bihar</div>
+      <div style="font-size: 7.9pt; color: #334155; margin-top: 0.2px;">Jeewan Public School, Motihari, Bihar</div>
     </div>
   </section>
 
