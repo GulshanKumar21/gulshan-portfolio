@@ -80,7 +80,7 @@
       </div>
       <div class="hero-stats" id="hero-stats">
         <div class="stat">
-          <span class="stat-num">2</span>
+          <span class="stat-num">5</span>
           <span class="stat-label">Projects Built</span>
         </div>
         <div class="stat-divider"></div>
@@ -385,10 +385,125 @@
       </div>
       <div class="filter-bar">
         <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="professional">💼 Professional</button>
         <button class="filter-btn" data-filter="academic">🎓 Academic Work</button>
       </div>
 
-      <div class="projects-grid">  
+      <div class="projects-grid">
+
+        <!-- LeadDialer CRM -->
+        <div class="project-card featured filter-item professional" id="project-leaddialer">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon crm-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              </div>
+              <div class="project-meta">
+                <div class="project-badges">
+                  <span class="project-type android-badge">Android · Kotlin</span>
+                  <span class="project-type prod-badge">✅ Production</span>
+                  <span class="project-type solo-badge">👤 Solo Built</span>
+                  <span class="project-type private-badge">🔒 Private</span>
+                </div>
+                <span class="project-date">Mar 2025 – Present</span>
+              </div>
+            </div>
+            <h3 class="project-title">LeadDialer <span class="title-sub">— CRM &amp; Sales App</span></h3>
+            <p class="project-desc">A full-featured <strong>Android CRM application</strong> designed for sales teams to manage leads efficiently. The app enables one-tap lead calling, automated follow-up reminders, GPS-based attendance with selfie verification, and real-time sales dashboards — all in one place. Built solo from scratch using clean MVVM architecture with offline-first capabilities.</p>
+            <div class="project-features">
+              <div class="feature-item">📞 One-tap Lead Calling</div>
+              <div class="feature-item">🔁 Follow-up Reminders</div>
+              <div class="feature-item">📍 GPS Attendance + Selfie</div>
+              <div class="feature-item">📊 Live Sales Dashboard</div>
+              <div class="feature-item">🌙 Offline-First Mode</div>
+              <div class="feature-item">🔔 FCM Push Notifications</div>
+            </div>
+            <div class="project-tech">
+              <span class="tech-pill">Kotlin</span>
+              <span class="tech-pill">Jetpack Compose</span>
+              <span class="tech-pill">MVVM</span>
+              <span class="tech-pill">Room DB</span>
+              <span class="tech-pill">Firebase</span>
+              <span class="tech-pill">WorkManager</span>
+            </div>
+          </div>
+          <div class="project-glow crm-glow"></div>
+        </div>
+
+        <!-- One School App -->
+        <div class="project-card featured filter-item professional" id="project-school">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon student-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+              </div>
+              <div class="project-meta">
+                <div class="project-badges">
+                  <span class="project-type flutter-badge">Flutter · Dart</span>
+                  <span class="project-type prod-badge">✅ Production</span>
+                  <span class="project-type private-badge">🔒 Private</span>
+                </div>
+                <span class="project-date">Mar 2025 – Present</span>
+              </div>
+            </div>
+            <h3 class="project-title">One School App <span class="title-sub">— School Management Platform</span></h3>
+            <p class="project-desc">A comprehensive <strong>Flutter-based school management application</strong> built for students, teachers, and administrators. The app covers the complete school ecosystem — from class-wise learning content and attendance tracking to admin controls and real-time notifications. I was responsible for complete frontend &amp; UI development.</p>
+            <div class="project-features">
+              <div class="feature-item">🎓 Student Learning Portal</div>
+              <div class="feature-item">📋 Attendance Management</div>
+              <div class="feature-item">👨‍🏫 Teacher Dashboard</div>
+              <div class="feature-item">👑 Admin Panel</div>
+              <div class="feature-item">🔔 Push Notifications</div>
+              <div class="feature-item">📚 Class-wise Content</div>
+            </div>
+            <div class="project-tech">
+              <span class="tech-pill">Flutter</span>
+              <span class="tech-pill">Dart</span>
+              <span class="tech-pill">Firebase</span>
+              <span class="tech-pill">REST API</span>
+              <span class="tech-pill">Material Design</span>
+            </div>
+          </div>
+          <div class="project-glow student-glow"></div>
+        </div>
+
+        <!-- LMS App -->
+        <div class="project-card filter-item professional" id="project-lms">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon learning-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3m6.82 6L12 12.72 5.18 9 12 5.28 18.82 9M17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+              </div>
+              <div class="project-meta">
+                <div class="project-badges">
+                  <span class="project-type flutter-badge">Flutter · Dart</span>
+                  <span class="project-type prod-badge">✅ Production</span>
+                  <span class="project-type private-badge">🔒 Private</span>
+                </div>
+                <span class="project-date">Mar 2025 – Present</span>
+              </div>
+            </div>
+            <h3 class="project-title">LMS App <span class="title-sub">— Learning Management System</span></h3>
+            <p class="project-desc">A <strong>Flutter-based Learning Management System</strong> app designed to deliver structured educational content to students. Features include course browsing, video lessons, progress tracking, quizzes, and a gamified learning experience. I handled complete app frontend development with a focus on smooth UI/UX and performance.</p>
+            <div class="project-features">
+              <div class="feature-item">📹 Video Lessons</div>
+              <div class="feature-item">📊 Progress Tracking</div>
+              <div class="feature-item">🎮 Gamified Learning</div>
+              <div class="feature-item">📝 Quizzes &amp; Assessments</div>
+              <div class="feature-item">🏆 Leaderboard</div>
+              <div class="feature-item">🔐 Secure Login</div>
+            </div>
+            <div class="project-tech">
+              <span class="tech-pill">Flutter</span>
+              <span class="tech-pill">Dart</span>
+              <span class="tech-pill">Firebase</span>
+              <span class="tech-pill">REST API</span>
+              <span class="tech-pill">Gamification</span>
+            </div>
+          </div>
+          <div class="project-glow admin-glow"></div>
+        </div>
+
         <!-- Zoo Explorer -->
         <div class="project-card featured filter-item academic" id="project-zoo">
           <div class="project-card-inner">
@@ -452,9 +567,17 @@
               Associated with LPU
             </div>
           </div>
-         </section>
+          <div class="project-glow learning-glow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <!-- Experience Section -->
+
+
+
   <section class="section experience-section" id="experience">
     <div class="container">
       <div class="section-header">
