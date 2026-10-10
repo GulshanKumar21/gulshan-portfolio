@@ -72,17 +72,21 @@
         <span class="cursor">|</span>
       </div>
       <p class="hero-desc" id="hero-desc">
-        From <span class="highlight">Sugauli, Bihar</span> &bull; B.Tech CSE @ <span class="highlight">LPU</span> (Sep 2022 – Jun 2026) &bull; <span class="highlight">Android &amp; Flutter Developer</span> at <span class="highlight">Adyapan Edutech</span>. Specialized in building clean, offline-first mobile apps with Jetpack Compose, MVVM architecture, Room Database &amp; scalable Firebase backends.
+        From <span class="highlight">Sugauli, Bihar</span> &bull; B.Tech CSE @ <span class="highlight">LPU</span> (Sep 2022 – Jun 2026) &bull; <span class="highlight">Android Developer</span> at <span class="highlight">Adyapan Edutech</span>. Specialized in building clean, offline-first mobile apps with Jetpack Compose, MVVM architecture, Room Database &amp; scalable Firebase backends.
       </p>
       <div class="hero-buttons" id="hero-buttons">
         <a href="#projects" class="btn btn-primary" id="btn-projects">View My Work 🚀</a>
-        <button type="button" class="btn btn-resume" id="btn-resume-preview" title="Quick View Resume">
+        <button type="button" class="btn btn-resume" id="btn-resume-preview" title="Quick View Resume & CV">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-          View Resume 👁️
+          View Resume / CV 👁️
         </button>
-        <a href="resume.pdf" download class="btn btn-secondary" id="btn-resume" title="Download ATS Resume PDF">
+        <a href="Gulshan_Kumar_Resume.pdf" download class="btn btn-secondary" id="btn-resume" title="Download ATS 1-Page Resume PDF">
           <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-          Download PDF
+          Resume (1-Page)
+        </a>
+        <a href="Gulshan_Kumar_CV.pdf" download class="btn btn-secondary" id="btn-cv" title="Download Comprehensive 2-Page CV PDF">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          CV (2-Page)
         </a>
         <a href="#contact" class="btn btn-secondary" id="btn-contact">Get In Touch</a>
       </div>
@@ -1131,28 +1135,47 @@
     </div>
   </div>
 
-  <!-- Resume Preview Modal -->
+  <!-- Resume & CV Preview Modal -->
   <div class="modal-overlay" id="resume-modal" aria-hidden="true">
-    <div class="modal-card resume-modal-card">
+    <div class="modal-card resume-modal-card" style="max-width: 900px; width: 95%;">
       <button class="modal-close" id="close-resume-modal" aria-label="Close modal">&times;</button>
       <div class="resume-modal-topbar">
         <div class="resume-modal-info">
-          <div class="modal-badge">📄 ATS-Compliant 1-Page CV</div>
-          <h3>Gulshan Kumar · Resume</h3>
-          <p>Android &amp; Flutter Developer &bull; Adyapan Edutech (Full-Time &amp; Intern) &bull; Sugauli, Bihar &bull; LPU 2022–2026</p>
+          <div class="modal-badge">📄 Official Documents</div>
+          <h3>Gulshan Kumar · Resume &amp; CV</h3>
+          <p>Android Developer &bull; Adyapan Edutech (Intern) &bull; Sugauli, Bihar - 845456 &bull; LPU 2022–2026</p>
         </div>
-        <div class="resume-modal-actions">
-          <a href="resume.pdf" download class="btn btn-primary btn-sm">
+        <div class="resume-modal-actions" style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <a href="Gulshan_Kumar_Resume.pdf" download class="btn btn-primary btn-sm" title="Download 1-Page ATS Resume">
             <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-            Download PDF
+            Download Resume (1-Page)
           </a>
-          <a href="resume.pdf" target="_blank" class="btn btn-secondary btn-sm">
-            Open PDF ↗
+          <a href="Gulshan_Kumar_CV.pdf" download class="btn btn-secondary btn-sm" title="Download 2-Page Full CV">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            Download CV (2-Page)
           </a>
         </div>
       </div>
-      <div class="resume-modal-body">
-        <img src="resume_preview.png" alt="Gulshan Kumar Official ATS Resume Preview" class="resume-sheet-img" />
+
+      <!-- Document Switcher Tabs -->
+      <div style="display: flex; gap: 10px; padding: 12px 24px; background: rgba(15, 23, 42, 0.7); border-bottom: 1px solid var(--border-color, #334155); justify-content: center;">
+        <button type="button" id="tab-show-resume" class="btn btn-sm btn-primary" onclick="window.showDocTab('resume')">
+          📄 1-Page Resume (ATS Optimized)
+        </button>
+        <button type="button" id="tab-show-cv" class="btn btn-sm btn-secondary" onclick="window.showDocTab('cv')">
+          📚 2-Page Curriculum Vitae (CV)
+        </button>
+      </div>
+
+      <div class="resume-modal-body" style="overflow-y: auto; max-height: 72vh; padding: 16px; text-align: center;">
+        <div id="doc-view-resume">
+          <p style="margin-bottom: 10px; font-size: 0.85rem; color: #94a3b8;">Single-page high-impact ATS resume targeted for recruiters and fast screening.</p>
+          <img src="resume_preview.png" alt="Gulshan Kumar 1-Page Resume Preview" class="resume-sheet-img" style="max-width: 100%; border-radius: 6px; box-shadow: 0 4px 20px rgba(0,0,0,0.35);" />
+        </div>
+        <div id="doc-view-cv" style="display: none;">
+          <p style="margin-bottom: 10px; font-size: 0.85rem; color: #94a3b8;">Comprehensive 2-page academic &amp; professional Curriculum Vitae (in-depth projects, coursework &amp; skill matrix).</p>
+          <img src="cv_preview.png" alt="Gulshan Kumar 2-Page CV Preview" class="resume-sheet-img" style="max-width: 100%; border-radius: 6px; box-shadow: 0 4px 20px rgba(0,0,0,0.35);" />
+        </div>
       </div>
     </div>
   </div>

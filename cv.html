@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gulshan Kumar - Curriculum Vitae (CV)</title>
+  <style>
+    @page {
+      size: letter;
+      margin: 12.0mm 12.7mm 11.5mm 12.7mm;
+    }
+    *, *:before, *:after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #0f172a;
+      background: #ffffff;
+      line-height: 1.22;
+      font-size: 8.1pt;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Page container */
+    .cv-page {
+      width: 100%;
+    }
+    #page-2 {
+      page-break-before: always;
+      break-before: page;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 4px;
+      padding-bottom: 3px;
+      border-bottom: 1.5px solid #0f172a;
+    }
+    h1.name {
+      font-size: 21pt;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: 0.5px;
+      line-height: 1.05;
+      margin: 0 0 2px 0;
+      text-transform: uppercase;
+    }
+    .role-title {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #0284c7;
+      margin: 0 0 3px 0;
+      letter-spacing: 0.2px;
+    }
+    .contact-line {
+      font-size: 8.0pt;
+      color: #334155;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 7px;
+      line-height: 1.25;
+    }
+    .contact-sep {
+      color: #94a3b8;
+      font-weight: 400;
+    }
+
+    /* Page 2 Header (Compact) */
+    .page2-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 2px;
+      margin-bottom: 5px;
+      font-size: 7.5pt;
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    /* Section Headings */
+    section {
+      margin-top: 5.5px;
+      margin-bottom: 3px;
+    }
+    h2.section-heading {
+      font-size: 9.2pt;
+      font-weight: 800;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      border-bottom: 1.2px solid #0f172a;
+      padding-bottom: 1px;
+      margin: 0 0 3.5px 0;
+    }
+
+    /* Summary */
+    .summary-text {
+      font-size: 8.1pt;
+      color: #1e293b;
+      line-height: 1.26;
+      text-align: justify;
+      margin: 0;
+    }
+    
+    /* Skills Grid */
+    .skills-block {
+      margin: 0;
+    }
+    .skill-row {
+      font-size: 8.0pt;
+      color: #1e293b;
+      line-height: 1.25;
+      margin-bottom: 1.8px;
+    }
+    .skill-row strong {
+      color: #0f172a;
+      font-weight: 700;
+    }
+    
+    /* Item Header */
+    .item-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-top: 3px;
+      margin-bottom: 0.5px;
+    }
+    .item-primary {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .item-secondary {
+      font-size: 8.2pt;
+      font-weight: 600;
+      color: #334155;
+    }
+    .item-date {
+      font-size: 8.0pt;
+      font-weight: 600;
+      color: #475569;
+      white-space: nowrap;
+    }
+    
+    /* Native Round Bullets */
+    ul {
+      list-style-type: disc;
+      padding-left: 14px;
+      margin-top: 1px;
+      margin-bottom: 2px;
+    }
+    li {
+      margin-bottom: 1.2px;
+      color: #1e293b;
+      font-size: 8.0pt;
+      text-align: left;
+      line-height: 1.22;
+    }
+    li strong {
+      color: #0f172a;
+      font-weight: 700;
+    }
+    
+    /* Project Tools Subtitle */
+    .project-tools {
+      font-size: 7.5pt;
+      color: #475569;
+      margin-top: 0.5px;
+      margin-bottom: 1.5px;
+      line-height: 1.2;
+    }
+
+    /* Cert item */
+    .cert-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1.5px;
+      font-size: 8.0pt;
+      color: #1e293b;
+    }
+
+    /* Education item */
+    .edu-item {
+      margin-top: 2.5px;
+      margin-bottom: 2px;
+    }
+    .coursework {
+      font-size: 7.7pt;
+      color: #475569;
+      margin-top: 1px;
+      line-height: 1.2;
+    }
+
+    /* Two-column layout helper for certifications & achievements or personal details */
+    .two-col-grid {
+      display: flex;
+      gap: 15px;
+      margin-top: 2px;
+    }
+    .two-col-grid > div {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <div class="cv-page" id="page-1">
+    
+    <!-- Header -->
+    <div class="header">
+      <h1 class="name">Gulshan Kumar</h1>
+      <div class="role-title">Curriculum Vitae &bull; Android Developer &bull; Computer Science Engineer</div>
+      <div class="contact-line">
+        <span>+91 7654253873</span>
+        <span class="contact-sep">|</span>
+        <span><a href="mailto:gulshan.12216935@gmail.com">gulshan.12216935@gmail.com</a></span>
+        <span class="contact-sep">|</span>
+        <span>Sugauli, Bihar, India - 845456</span>
+      </div>
+      <div class="contact-line">
+        <span><a href="https://www.linkedin.com/in/gulshan-kumar38" target="_blank">linkedin.com/in/gulshan-kumar38</a></span>
+        <span class="contact-sep">|</span>
+        <span><a href="https://github.com/Gulshankumar21" target="_blank">github.com/Gulshankumar21</a></span>
+        <span class="contact-sep">|</span>
+        <span><a href="https://gulshankumar21.github.io/gulshan-portfolio/" target="_blank">gulshankumar21.github.io/gulshan-portfolio</a></span>
+      </div>
+    </div>
+
+    <!-- CURRICULUM VITAE PROFILE -->
+    <section>
+      <h2 class="section-heading">Curriculum Vitae Profile</h2>
+      <div class="summary-text">
+        Dedicated and analytical <strong>Android Application Engineer</strong> with an established academic foundation in Computer Science and verified production experience designing enterprise and consumer-facing mobile solutions. Proven expertise in modern <strong>Kotlin</strong> and <strong>Jetpack Compose</strong> architectures, reactive local caching via <strong>Room SQLite</strong>, and robust cloud integrations. Demonstrated engineering track record sustaining <strong>99.8% crash-free sessions</strong>, reducing backend bandwidth by <strong>40%</strong>, and solving <strong>200+ algorithmic problems</strong> across global competitive programming platforms. Passionate about clean code, MVVM patterns, modular design, and test-driven mobile development.
+      </div>
+    </section>
+
+    <!-- TECHNICAL & PROFESSIONAL COMPETENCIES -->
+    <section>
+      <h2 class="section-heading">Technical Competencies &amp; Skill Matrix</h2>
+      <div class="skills-block">
+        <div class="skill-row">• <strong>Programming Languages:</strong> Kotlin (Primary), Java (Proficient), Python, SQL, C, C++, JavaScript (ES6+), HTML5, CSS3</div>
+        <div class="skill-row">• <strong>Android Framework &amp; SDK:</strong> Jetpack Compose, XML Layouts, Activity &amp; Fragment Lifecycles, Material Design 3, Jetpack Navigation, Android Services, Broadcast Receivers, WorkManager, AlarmManager</div>
+        <div class="skill-row">• <strong>Architecture &amp; State:</strong> MVVM (Model-View-ViewModel), Clean Architecture, Repository Pattern, Jetpack ViewModel, LiveData, Kotlin Coroutines, StateFlow, SharedFlow, Dependency Injection</div>
+        <div class="skill-row">• <strong>Data Storage &amp; Persistence:</strong> Room SQLite Database, Android SQLite, SharedPreferences, EncryptedSharedPreferences, Jetpack DataStore, Firebase Cloud Firestore, Firebase Realtime Database</div>
+        <div class="skill-row">• <strong>Cloud &amp; Networking:</strong> RESTful APIs, Retrofit 2, OkHttp, JSON Parsing (Gson, Moshi), Firebase Authentication, Firebase Cloud Messaging (FCM), Cloud Storage, Postman API Testing</div>
+        <div class="skill-row">• <strong>Build, CI/CD &amp; Tools:</strong> Android Studio, VS Code, Git Version Control, GitHub Actions, Gradle Build Scripts, Google Play Console, ADB, Android Profiler, Logcat, Linux Environment</div>
+        <div class="skill-row">• <strong>Methodologies &amp; Soft Skills:</strong> Agile / Scrum Sprints, Object-Oriented Analysis &amp; Design (OOAD), Data Structures &amp; Algorithms, Peer Code Reviews, Technical Documentation, Problem Solving</div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL WORK EXPERIENCE -->
+    <section>
+      <h2 class="section-heading">Professional Work Experience</h2>
+      
+      <div class="item-row">
+        <div>
+          <span class="item-primary">Adyapan Edutech Private Limited</span>
+          <span class="item-secondary"> &mdash; Android Developer Intern</span>
+        </div>
+        <span class="item-date">Hyderabad, Telangana | Mar 2026 &ndash; Sep 2026</span>
+      </div>
+      <div class="project-tools"><strong>Domain:</strong> Enterprise Educational ERP, CRM Automation &amp; Biometric Security Systems &bull; <strong>Tech:</strong> Kotlin, Jetpack Compose, Room, WorkManager, Firebase, Retrofit</div>
+      <ul>
+        <li>Spearheaded Android module releases for enterprise apps, sustaining <strong>99.8% crash-free sessions</strong> across 5,000+ active installations and accelerating sprint deliveries by <strong>25%</strong>.</li>
+        <li>Architected and built the <strong>Lead Dialer CRM</strong> mobile engine with automated one-tap dialer queues and background processing, logging <strong>1,000+ daily call interactions</strong> and improving sales outreach efficiency by <strong>35%</strong>.</li>
+        <li>Developed on-device biometric attendance module combining facial recognition with <strong>Google Play Services Location</strong> and GPS geofencing, eliminating <strong>100% of proxy attendance</strong> within a strict <strong>50-meter perimeter</strong> for <strong>200+ on-site staff</strong>.</li>
+        <li>Authored native Android dashboards for <strong>One School App</strong> and <strong>LMS</strong> with customized role-based access control, deploying targeted <strong>Firebase Cloud Messaging (FCM)</strong> alerts to <strong>5,000+ registered students</strong> with a <strong>28% increase in engagement</strong>.</li>
+        <li>Engineered offline-first persistence using <strong>Room SQLite</strong> caching paired with asynchronous <strong>Firebase Firestore</strong> synchronization, slashing redundant server network requests by <strong>40%</strong>.</li>
+        <li>Collaborated in 2-week Agile sprint cycles, conducting peer code reviews, profiling memory leaks with <strong>Android Profiler</strong>, and configuring ProGuard/R8 rules to minimize production APK size.</li>
+      </ul>
+    </section>
+
+    <!-- ACADEMIC EDUCATION (PAGE 1) -->
+    <section>
+      <h2 class="section-heading">Academic Education</h2>
+      
+      <div class="edu-item">
+        <div class="item-row">
+          <div>
+            <span class="item-primary">Lovely Professional University (LPU)</span>
+            <span class="item-secondary"> &mdash; B.Tech in Computer Science and Engineering</span>
+          </div>
+          <span class="item-date">Phagwara, Punjab | Sep 2022 &ndash; Jun 2026</span>
+        </div>
+        <div class="coursework">
+          <strong>Key Coursework:</strong> Data Structures &amp; Algorithms, Object-Oriented Programming (Java/C++), Database Management Systems (SQL), Operating Systems, Computer Networks, Software Engineering, Design &amp; Analysis of Algorithms, Mobile Computing.
+        </div>
+      </div>
+      
+      <div class="edu-item">
+        <div class="item-row">
+          <div>
+            <span class="item-primary">S.N.S. College</span>
+            <span class="item-secondary"> &mdash; Intermediate (Class XII, Science) &bull; Aggregate: <strong>67.6%</strong></span>
+          </div>
+          <span class="item-date">Motihari, Bihar | Apr 2020 &ndash; Mar 2022</span>
+        </div>
+        <div class="coursework">
+          <strong>Core Subjects:</strong> Physics, Chemistry, Mathematics, English, Computer Science.
+        </div>
+      </div>
+
+      <div class="edu-item">
+        <div class="item-row">
+          <div>
+            <span class="item-primary">Jeewan Public School</span>
+            <span class="item-secondary"> &mdash; Matriculation (Class X) &bull; Aggregate: <strong>78.6%</strong></span>
+          </div>
+          <span class="item-date">Motihari, Bihar | Apr 2018 &ndash; Mar 2020</span>
+        </div>
+        <div class="coursework">
+          <strong>Core Subjects:</strong> Mathematics, Science, Social Science, English, Hindi.
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="cv-page" id="page-2">
+    
+    <div class="page2-header">
+      <span>Gulshan Kumar &bull; Curriculum Vitae (Page 2)</span>
+      <span>Android Developer (Kotlin, Jetpack Compose)</span>
+      <span>gulshan.12216935@gmail.com</span>
+    </div>
+
+    <!-- ACADEMIC & TECHNICAL PROJECTS -->
+    <section>
+      <h2 class="section-heading">Key Engineering Projects</h2>
+      
+      <!-- Zoo Explorer -->
+      <div class="item-row">
+        <div>
+          <span class="item-primary">Zoo Explorer &mdash; Wildlife Companion Application</span>
+          <span style="font-size: 7.6pt; color: #047857; font-weight: 700; margin-left: 3px;">[Live on Google Play]</span>
+          <span style="font-size: 7.6pt; margin-left: 3px;">
+            [<a href="https://play.google.com/store/apps/details?id=com.wildlife.zooexplorer" target="_blank">Play Store</a>] 
+            [<a href="https://github.com/Gulshankumar21" target="_blank">GitHub</a>]
+          </span>
+        </div>
+        <span class="item-date">Apr 2025</span>
+      </div>
+      <div class="project-tools"><strong>Core Tech:</strong> Kotlin, Jetpack Compose, Room SQLite, Google Maps SDK, Firebase Firestore, MVVM, Material 3</div>
+      <ul>
+        <li>Architected and published native Kotlin wildlife companion app on <strong>Google Play Store</strong> with <strong>50+ active downloads</strong> and an exceptional <strong>4.8 / 5.0 public rating</strong>.</li>
+        <li>Embedded interactive <strong>Google Maps SDK</strong> navigation featuring custom vector markers, animal habitat routes, and zone-based geofences spanning <strong>20+ wildlife enclosures</strong>.</li>
+        <li>Engineered a <strong>100% declarative UI</strong> with <strong>Jetpack Compose</strong> and local <strong>Room SQLite</strong> persistence, reducing screen transition latency by <strong>90%</strong> and enabling full offline viewing.</li>
+        <li>Formulated continuous in-app user feedback loops, elevating Play Store public score from 3.6 to <strong>4.8 / 5.0 stars (+1.2 rating boost)</strong> within <strong>90 days</strong>.</li>
+      </ul>
+
+      <!-- Tic Tac Toe -->
+      <div class="item-row" style="margin-top: 3.5px;">
+        <div>
+          <span class="item-primary">Tic Tac Toe &mdash; Smart Android Game with Minimax AI Engine</span>
+          <span style="font-size: 7.6pt; margin-left: 3px;">[<a href="https://github.com/Gulshankumar21" target="_blank">GitHub</a>]</span>
+        </div>
+        <span class="item-date">Nov 2024</span>
+      </div>
+      <div class="project-tools"><strong>Core Tech:</strong> Kotlin, Android SDK, Custom Canvas/XML, Minimax Decision Tree Algorithm, OOP, Git</div>
+      <ul>
+        <li>Created interactive Android strategy game featuring dual gameplay modes (Human vs AI and Two-Player Local), completing <strong>500+ matches</strong> with <strong>0 ANR incidents</strong>.</li>
+        <li>Programmed heuristic decision engine computing counter-moves in <strong>under 10 milliseconds</strong> via recursive <strong>Minimax</strong> game tree logic, attaining an unbeatable <strong>100% win/draw AI rate</strong>.</li>
+        <li>Constructed centralized state management preserving board state, game rules, and score tallies across <strong>100% of device orientation changes</strong> and lifecycle events.</li>
+      </ul>
+
+      <!-- Learning Management System (LMS) -->
+      <div class="item-row" style="margin-top: 3.5px;">
+        <div>
+          <span class="item-primary">Learning Management System (LMS) &mdash; Web Education Portal</span>
+          <span style="font-size: 7.6pt; margin-left: 3px;">[<a href="https://github.com/Gulshankumar21" target="_blank">GitHub</a>]</span>
+        </div>
+        <span class="item-date">Dec 2022</span>
+      </div>
+      <div class="project-tools"><strong>Core Tech:</strong> JavaScript (ES6+), HTML5, CSS3, REST API Integration, Modular Architecture, Git</div>
+      <ul>
+        <li>Designed comprehensive web portal hosting <strong>15+ structured academic courses</strong> with role-based dashboards for students and educators, reducing administrative overhead by <strong>40%</strong>.</li>
+        <li>Integrated interactive video lecture player, automated assessment engine, and discussion forum serving <strong>200+ registered learners</strong> with a <strong>95% course completion ratio</strong>.</li>
+        <li>Directed a team of 4 student developers to build modular frontend views, driving a <strong>65% surge in weekly student learning engagement</strong>.</li>
+      </ul>
+    </section>
+
+    <!-- PROFESSIONAL CERTIFICATIONS & TRAINING -->
+    <section>
+      <h2 class="section-heading">Certifications &amp; Specialized Training</h2>
+      
+      <div class="cert-row">
+        <div>
+          <strong>• Introduction to Android Mobile Application Development</strong> &mdash; Meta (Coursera)
+          <div style="font-size: 7.6pt; color: #475569; margin-left: 10px;">Comprehensive training in Android Studio, Activity lifecycles, UI layouts, and Android best practices.</div>
+        </div>
+        <span class="item-date">Oct 2024</span>
+      </div>
+
+      <div class="cert-row" style="margin-top: 2px;">
+        <div>
+          <strong>• Programming Fundamentals in Kotlin</strong> &mdash; Meta (Coursera)
+          <div style="font-size: 7.6pt; color: #475569; margin-left: 10px;">Advanced object-oriented programming, lambdas, coroutines, collections, and functional programming in Kotlin.</div>
+        </div>
+        <span class="item-date">Nov 2024</span>
+      </div>
+
+      <div class="cert-row" style="margin-top: 2px;">
+        <div>
+          <strong>• Cloud Computing</strong> &mdash; NPTEL (IIT Kharagpur)
+          <div style="font-size: 7.6pt; color: #475569; margin-left: 10px;">Explored cloud architectures, distributed virtualization, cloud storage paradigms, and cloud security frameworks.</div>
+        </div>
+        <span class="item-date">Dec 2024</span>
+      </div>
+    </section>
+
+    <!-- COMPETITIVE PROGRAMMING & HONORS -->
+    <section>
+      <h2 class="section-heading">Competitive Programming &amp; Honors</h2>
+      <ul>
+        <li><strong>GeeksforGeeks Institutional Rank 500:</strong> Ranked among top university coders out of <strong>5,000+ peers</strong> through continuous algorithmic problem-solving in Data Structures and Algorithms.</li>
+        <li><strong>Coding Ninjas Division Master:</strong> Secured Division Master standing with <strong>92% accuracy</strong> across weekly competitive programming contests.</li>
+        <li><strong>200+ Algorithmic Challenges Solved:</strong> Solved 200+ Data Structures &amp; Algorithms problems across LeetCode, GeeksforGeeks, and Coding Ninjas focusing on Arrays, Trees, Dynamic Programming, and Graph algorithms with optimal time-space complexity.</li>
+      </ul>
+    </section>
+
+    <!-- LEADERSHIP & PERSONAL PARTICULARS -->
+    <section>
+      <h2 class="section-heading">Personal Details &amp; Additional Information</h2>
+      <div class="two-col-grid">
+        <div>
+          <div style="font-size: 8.0pt; margin-bottom: 2px;">• <strong>Languages:</strong> English (Professional Working), Hindi (Native / Fluent)</div>
+          <div style="font-size: 8.0pt; margin-bottom: 2px;">• <strong>Permanent Address:</strong> Sugauli, District East Champaran, Bihar, India &ndash; 845456</div>
+          <div style="font-size: 8.0pt;">• <strong>Relocation:</strong> Open to relocation across India &amp; remote opportunities</div>
+        </div>
+        <div>
+          <div style="font-size: 8.0pt; margin-bottom: 2px;">• <strong>Engineering Interests:</strong> Mobile UI/UX Design, Jetpack Compose, Offline-First Architecture</div>
+          <div style="font-size: 8.0pt; margin-bottom: 2px;">• <strong>Profiles:</strong> GitHub (@Gulshankumar21), LinkedIn (@gulshan-kumar38)</div>
+          <div style="font-size: 8.0pt;">• <strong>Portfolio Website:</strong> <a href="https://gulshankumar21.github.io/gulshan-portfolio/" target="_blank">gulshankumar21.github.io/gulshan-portfolio</a></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>

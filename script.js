@@ -822,6 +822,37 @@ if (resumeModal) {
   });
 }
 
+window.showDocTab = function(type) {
+  const resumeView = document.getElementById('doc-view-resume');
+  const cvView = document.getElementById('doc-view-cv');
+  const resumeTab = document.getElementById('tab-show-resume');
+  const cvTab = document.getElementById('tab-show-cv');
+
+  if (type === 'cv') {
+    if (resumeView) resumeView.style.display = 'none';
+    if (cvView) cvView.style.display = 'block';
+    if (resumeTab) {
+      resumeTab.classList.remove('btn-primary');
+      resumeTab.classList.add('btn-secondary');
+    }
+    if (cvTab) {
+      cvTab.classList.remove('btn-secondary');
+      cvTab.classList.add('btn-primary');
+    }
+  } else {
+    if (resumeView) resumeView.style.display = 'block';
+    if (cvView) cvView.style.display = 'none';
+    if (resumeTab) {
+      resumeTab.classList.remove('btn-secondary');
+      resumeTab.classList.add('btn-primary');
+    }
+    if (cvTab) {
+      cvTab.classList.remove('btn-primary');
+      cvTab.classList.add('btn-secondary');
+    }
+  }
+};
+
 // ==========================================
 // 4. COMMAND PALETTE (CTRL + K / CMD + K)
 // ==========================================
@@ -834,20 +865,32 @@ const floatingCmdBtn = document.getElementById('floating-cmd-btn');
 const commands = [
   {
     icon: '👁️',
-    title: 'Preview Resume / CV',
-    sub: 'Open interactive 1-page ATS resume modal preview',
+    title: 'Preview Resume & CV',
+    sub: 'Open interactive modal to view 1-Page Resume & 2-Page CV',
     badge: 'Preview',
     action: () => openResumeModal()
   },
   {
     icon: '📄',
-    title: 'Download Resume',
-    sub: 'Get Gulshan Kumar\'s latest Android & Flutter resume (PDF)',
-    badge: 'File',
+    title: 'Download Resume (1-Page)',
+    sub: 'Get ATS-optimized 1-page Android Developer resume (PDF)',
+    badge: 'Resume',
     action: () => {
       const a = document.createElement('a');
-      a.href = 'resume.pdf';
+      a.href = 'Gulshan_Kumar_Resume.pdf';
       a.download = 'Gulshan_Kumar_Resume.pdf';
+      a.click();
+    }
+  },
+  {
+    icon: '📚',
+    title: 'Download Full CV (2-Page)',
+    sub: 'Get comprehensive 2-page academic & professional Curriculum Vitae (PDF)',
+    badge: 'CV',
+    action: () => {
+      const a = document.createElement('a');
+      a.href = 'Gulshan_Kumar_CV.pdf';
+      a.download = 'Gulshan_Kumar_CV.pdf';
       a.click();
     }
   },
